@@ -1,2 +1,5 @@
-mkdir %APPDATA%\"Sublime Text 2"\Packages\"Gmod Lua";
-COPY \Y * %APPDATA%\"Sublime Text 2"\Packages\"Gmod Lua";
+@ECHO OFF
+
+mkdir "%APPDATA%\Sublime Text 2\Packages\Gmod Lua"
+COPY * "%APPDATA%\Sublime Text 2\Packages\Gmod Lua\"
+pause
