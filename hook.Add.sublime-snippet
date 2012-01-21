@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[hook.Add("${1:Think}", "${2:Press tab to enter this value}", ${3:function()
+	
+end})]]></content>
+<tabTrigger>hook</tabTrigger>
+	<scope>source.lua</scope>
+	<description>hook.Add()</description>
+</snippet>

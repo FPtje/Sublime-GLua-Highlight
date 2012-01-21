@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Sublime text GLua plugin generator"
+	"version"			"1"
+	"up_date"			"yesterday"
+	"author_name"			"(FPtje) Falco"
+	"author_email"			"fpeijnenburg@gmail.com"
+	"author_url"			"twitter.com/FPtje"
+	"info"				""
+	"override"			"0"
+}
