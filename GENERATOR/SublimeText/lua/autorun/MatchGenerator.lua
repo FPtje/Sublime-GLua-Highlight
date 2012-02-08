@@ -182,6 +182,24 @@ else
 	concommand.Add("sublime_generate_cl", generateXSideFiles)
 end
 
+/*---------------------------------------------------------------------------
+readGlon
+A helper function to properly read the file as a glon file.
+---------------------------------------------------------------------------*/
+local function readGlon( filename, path )
+	if ( path == true ) then path = "GAME" end
+	if ( path == nil || path == false ) then path = "DATA" end
+
+	local f = file.Open( filename, "r", path )
+	if ( !f ) then return end
+
+	local result = f:Read( f:Size() )
+
+	f:Close()
+
+	return glon.decode(result)
+end
+
 
 /*---------------------------------------------------------------------------
 Merge the server- and clientside files
@@ -189,8 +207,8 @@ Merge the server- and clientside files
 local function MergeFiles()
 	-- Merge a serverside and clientside file
 	local function mergeSingle(filename)
-		local sv = glon.decode(file.Read(filename.."_sv.txt"))
-		local cl = glon.decode(file.Read(filename.."_cl.txt"))
+		local sv = readGlon(filename.."_sv.txt")
+		local cl = readGlon(filename.."_cl.txt")
 
 		local shared = sv
 
@@ -287,7 +305,7 @@ local function GenerateSublimeStrings()
 
 	-- The derma controls and the package names
 	local strPackages = "(?&lt;![^.]\\.|:)\\b("
-	for k,v in pairs(glon.decode(file.Read("DermaControls_cl.txt"))) do
+	for k,v in pairs(readGlon("DermaControls_cl.txt")) do
 		strPackages = strPackages .. v .. "|"
 	end
 
