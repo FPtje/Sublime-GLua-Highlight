@@ -322,7 +322,7 @@ local function GenerateSublimeStrings()
 
 	"completions":
 	[
-		"do", "in", "end", "for", "else",
+		"do", "in", "end", "for", "else", "return",
 ]])
 
 	for k,v in pairs(merged.globalfunctions) do
