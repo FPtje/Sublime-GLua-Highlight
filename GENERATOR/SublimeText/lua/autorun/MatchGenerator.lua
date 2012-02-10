@@ -313,5 +313,43 @@ local function GenerateSublimeStrings()
 		strPackages = strPackages .. string.lower(k) .. "|"
 	end
 	file.Write("sublime_6packages.txt", string.sub(strPackages, 1, -2) .. ")\\b|(?&lt;![.])\\.{3}(?!\\.)")
+
+	-- Auto completion
+	local completions = file.Open("sublime-completions.txt", "w", "DATA")
+	completions:Write(
+	[[{
+	"scope": "source.lua - keyword.control.lua - constant.language.lua - string",
+
+	"completions":
+	[
+		"do", "in", "end", "for", "else",
+]])
+
+	for k,v in pairs(merged.globalfunctions) do
+		completions:Write('\t\t{ "trigger": "'.. v ..'", "contents": "'.. v ..'(${1})" },\n')
+	end
+
+	for k,v in pairs(merged.libraries) do
+		for a, b in pairs(v) do
+			completions:Write('\t\t{ "trigger": "'.. k ..'.'..b.. '", "contents": "'.. k ..'.'.. b ..'(${1})" },\n')
+		end
+	end
+
+	for k,v in pairs(merged.hooks) do
+		if string.upper(k) == "GAMEMODE" then
+			for _, func in pairs(v) do
+				completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "hook.Add(\\"'..func..'\\", ${1}, ${2})" },\n')
+			end
+		else
+			for _, func in pairs(v) do
+				completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "function '.. k ..':'.. func ..'(${1})\\n\\t${2}\\nend" },\n')
+			end
+		end
+	end
+
+
+	completions:Write("\t\t{}\n\t]\n}")
+
+	completions:Close()
 end
 concommand.Add("sublime_finishgenerate", GenerateSublimeStrings)
