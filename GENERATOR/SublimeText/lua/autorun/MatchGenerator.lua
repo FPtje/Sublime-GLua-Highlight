@@ -347,6 +347,12 @@ local function GenerateSublimeStrings()
 		end
 	end
 
+	for k,v in pairs(merged.metamethods) do
+		for _, func in pairs(v) do
+			completions:Write('\t\t{ "trigger": ":'.. func ..'", "contents": ":'.. func ..'(${1})" },\n')
+		end
+	end
+
 
 	completions:Write("\t\t{}\n\t]\n}")
 
