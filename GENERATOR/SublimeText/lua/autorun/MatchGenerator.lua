@@ -322,7 +322,7 @@ local function GenerateSublimeStrings()
 
 	"completions":
 	[
-		"do", "in", "end", "for", "else", "return", "false", "true", "then",
+		"do", "in", "end", "for", "else", "return", "false", "true", "then", "break",
 ]])
 
 	for k,v in pairs(merged.globalfunctions) do
@@ -347,9 +347,12 @@ local function GenerateSublimeStrings()
 		end
 	end
 
+	local doubleMethods = {} -- Some classes have the same methods. We want them to be in there only once
 	for k,v in pairs(merged.metamethods) do
 		for _, func in pairs(v) do
+			if table.HasValue(doubleMethods, func) then continue end
 			completions:Write('\t\t{ "trigger": ":'.. func ..'", "contents": ":'.. func ..'(${1})" },\n')
+			table.insert(doubleMethods, func)
 		end
 	end
 
