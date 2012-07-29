@@ -3,7 +3,7 @@
 
 	"completions":
 	[
-		"do", "in", "end", "for", "else", "return", "false", "true", "then", "break", "or", "and",
+		"in", "else", "return", "false", "true", "break", "or", "and",
 		{ "trigger": "GMODSpawnProp", "contents": "GMODSpawnProp(${1})" },
 		{ "trigger": "AddConsoleCommand", "contents": "AddConsoleCommand(${1})" },
 		{ "trigger": "SetGlobalVector", "contents": "SetGlobalVector(${1})" },
