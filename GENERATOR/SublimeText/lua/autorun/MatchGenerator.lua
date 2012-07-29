@@ -131,7 +131,8 @@ local function getHooks()
 	-- Entities
 	hooks["ENT"] = hooksFromTable(scripted_ents.Get("base_anim"))
 	hooks["ENT"] = hooksFromTable(scripted_ents.Get("base_ai"), hooks["ENT"])
-	hooks["ENT"] = hooksFromTable(scripted_ents.Get("base_vehicle"), hooks["ENT"])
+	hooks["ENT"] = hooksFromTable(scripted_ents.Get("widget_base"), hooks["ENT"])
+	//hooks["ENT"] = hooksFromTable(scripted_ents.Get("base_vehicle"), hooks["ENT"]) -- Gone in gmod 13?
 
 	if SERVER then -- The server only entity types
 		hooks["ENT"] = hooksFromTable(scripted_ents.Get("base_point"), hooks["ENT"])
