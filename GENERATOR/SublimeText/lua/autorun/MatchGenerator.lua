@@ -1,3 +1,5 @@
+-- REQUIRES Von by Vercas!
+-- https://github.com/wiremod/wire/blob/master/lua/autorun/von.lua
 /*---------------------------------------------------------------------------
 	/*---------------------------------------------------------------------------
 	Generic part
@@ -20,12 +22,16 @@ end
 /*---------------------------------------------------------------------------
 Get all the libraries
 ---------------------------------------------------------------------------*/
-local ignoreLibraries = {_G, _E, _R, GAMEMODE}
+local ignoreLibraries = {
+	_G = true,
+	GAMEMODE = true,
+	von = true}
+
 local function getLibraries()
 	local libraries = {}
 
-	for k,v in pairs(_E) do
-		if type(v) ~= "table" or table.HasValue(ignoreLibraries, v) then continue end -- If it's not a table, then it's not a library by definition
+	for k,v in pairs(_G) do
+		if type(v) ~= "table" or ignoreLibraries[v] then continue end -- If it's not a table, then it's not a library by definition
 
 		for name, value in pairs(v) do -- All libraries have functions. Some have other members
 			if type(value) == "function" then
@@ -43,7 +49,7 @@ Get the global functions
 ---------------------------------------------------------------------------*/
 local function getGlobalFunctions()
 	local functions = {}
-	for k,v in pairs(_E) do
+	for k,v in pairs(_G) do
 		if type(v) == "function" then
 			table.insert(functions, k)
 		end
@@ -57,10 +63,10 @@ Get the enumerations, grouped by the text between their underscores (in a tree s
 ---------------------------------------------------------------------------*/
 function getEnumerations()
 	local enumerations = {}
-	for k,v in SortedPairs(_E) do
-		-- An enumeration is an uppercase variable with a number or boolean as value
-		if string.upper(k) == k and (type(v) == "number" or type(v) == "boolean") then
-			table.insert(enumerations, k)
+
+	for k, v in next, _G do
+		if(type(v) == "number" and type(k) == "string" and k:upper() == k) then
+			enumerations[k] = k
 		end
 	end
 
@@ -91,7 +97,7 @@ NOTE: This doesn't get the hooks!
 local function getMetaMethods()
 	local objects = {} -- All the classes that exist, with their respective methods
 
-	for k,v in pairs(_R) do
+	for k,v in pairs(debug.getregistry()) do
 		-- All metamethods are in non-empty tables in _R. These tables always have a string as name
 		if type(v) != "table" or type(k) ~= "string" then continue end
 
@@ -156,7 +162,7 @@ end
 	sublime_finishgenerate
 	---------------------------------------------------------------------------*/
 ---------------------------------------------------------------------------*/
-require("glon")
+
 /*---------------------------------------------------------------------------
 generateXSideFiles
 Generates the syntax files of syntax data for either server or clientside
@@ -167,14 +173,14 @@ side: string which side. sv for server, cl for client
 local function generateXSideFiles()
 	local side = SERVER and "sv" or "cl"
 
-	file.Write("enums_"..side..".txt", glon.encode(getEnumerations()))
-	file.Write("libraries_"..side..".txt", glon.encode(getLibraries()))
-	file.Write("globalfunctions_"..side..".txt", glon.encode(getGlobalFunctions()))
-	file.Write("metamethods_"..side..".txt", glon.encode(getMetaMethods()))
-	file.Write("hooks_"..side..".txt", glon.encode(getHooks()))
+	file.Write("enums_"..side..".txt", von.serialize(getEnumerations()))
+	file.Write("libraries_"..side..".txt", von.serialize(getLibraries()))
+	file.Write("globalfunctions_"..side..".txt", von.serialize(getGlobalFunctions()))
+	file.Write("metamethods_"..side..".txt", von.serialize(getMetaMethods()))
+	file.Write("hooks_"..side..".txt", von.serialize(getHooks()))
 
 	if CLIENT then
-		file.Write("DermaControls_cl.txt", glon.encode(getDermaControls()))
+		file.Write("DermaControls_cl.txt", von.serialize(getDermaControls()))
 	end
 end
 if SERVER then
@@ -198,7 +204,7 @@ local function readGlon( filename, path )
 
 	f:Close()
 
-	return glon.decode(result)
+	return von.deserialize(result)
 end
 
 
