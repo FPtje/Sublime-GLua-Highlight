@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[timer.Create("${1:ID}", ${2:Delay}, ${3:Reps}, ${4:function()
 	${5:}
-end}${6:, arg})]]></content>
+end})]]></content>
 <tabTrigger>timer.Create</tabTrigger>
 	<scope>source.lua</scope>
 	<description>timer.Create</description>
