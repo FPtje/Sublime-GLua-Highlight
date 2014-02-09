@@ -1,6 +1,6 @@
 <snippet>
-	<content><![CDATA[timer.Simple(${1:1}, ${2:function(${3:})
-	${4:}
+	<content><![CDATA[timer.Simple(${1:Delay}, ${2:function()
+	${3:Press tab again to make the function in here}
 end})]]></content>
 	<tabTrigger>timer.Simple</tabTrigger>
 	<scope>source.lua</scope>

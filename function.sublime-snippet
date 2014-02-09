@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[function ${1:FunctionName}(${2:})
+	${3}
+end]]></content>
+<tabTrigger>function</tabTrigger>
+	<scope>source.lua</scope>
+	<description>function</description>
+</snippet>

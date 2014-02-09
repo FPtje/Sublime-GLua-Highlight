@@ -1,8 +1,8 @@
 <snippet>
 	<content><![CDATA[hook.Add("${1:Think}", "${2:Press tab to enter this value}", ${3:function()
-	
+	${4:Press tab again to make the function in here}
 end})]]></content>
-<tabTrigger>hook</tabTrigger>
+<tabTrigger>hook.Add</tabTrigger>
 	<scope>source.lua</scope>
 	<description>hook.Add()</description>
 </snippet>

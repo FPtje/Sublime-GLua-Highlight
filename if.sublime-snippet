@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[if ${1:ply:Alive}(${2}) then
+	${3}
+end]]></content>
+	<tabTrigger>if</tabTrigger>
+	<scope>source.lua</scope>
+	<description>if</description>
+</snippet>
