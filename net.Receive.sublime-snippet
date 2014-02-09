@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[net.Receive("${1:Message Name}", ${3:function()
+	${4:Press tab again to make the function in here}
+end})]]></content>
+<tabTrigger>net.Receive</tabTrigger>
+	<scope>source.lua</scope>
+	<description>net.Receive()</description>
+</snippet>
