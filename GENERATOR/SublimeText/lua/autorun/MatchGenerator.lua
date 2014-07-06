@@ -34,7 +34,8 @@ local function getLibraries()
 		if type(v) ~= "table" or ignoreLibraries[v] then continue end -- If it's not a table, then it's not a library by definition
 
 		-- the "library" is actually the metatable of a panel, don't put it in the libraries list
-		if CLIENT and vgui.GetControlTable(k) then
+		-- SpawniconGenFunctions are also bad news
+		if CLIENT and vgui.GetControlTable(k) or k == "SpawniconGenFunctions" then
 			continue
 		end
 
@@ -105,7 +106,7 @@ local function getMetaMethods()
 	local panelFunctionsSeen = {} -- Panels have a different case
 	for k,v in pairs(debug.getregistry()) do
 		-- All metamethods are in non-empty tables in _R. These tables always have a string as name
-		if type(v) != "table" or type(k) ~= "string" or k == "Panel" then continue end -- Skip panel metafunctions
+		if type(v) != "table" or type(k) ~= "string" then continue end
 
 
 		for name, func in pairs(v) do
