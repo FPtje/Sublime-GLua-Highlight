@@ -151,7 +151,7 @@
 		<!-- Multiline strings -->
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;!--)\[(=*)\[</string>
+			<string>(?&lt;!--)\[(=*)\[</string> <!-- negative lookbehind to not match multiline comments -->
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
