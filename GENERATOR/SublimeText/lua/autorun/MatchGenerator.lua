@@ -308,7 +308,7 @@ local function GenerateSublimeStrings()
 		end
 		strHooks = string.sub(strHooks, 1, -2) .. ")|"
 	end
-	file.Write("sublime_5hooks.txt", string.sub(strHooks, 1, -2) .. ")\\b(?=[( {])")
+	file.Write("sublime_5hooks.txt", string.sub(strHooks, 1, -2) .. ")\\b(?=[(\s{])")
 
 	-- The derma controls and the package names
 	local strPackages = "(?&lt;![^.]\\.|:)\\b("
