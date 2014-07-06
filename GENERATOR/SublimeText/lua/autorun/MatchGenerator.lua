@@ -301,7 +301,7 @@ local function GenerateSublimeStrings()
 	-- Hooks
 	local strHooks = "("
 	for k,v in pairs(merged.hooks) do
-		if string.upper(k) == "GAMEMODE" then k = "(GAMEMODE|GM)" end -- Special case where GM has the same functions as GAMEMODE
+		if string.upper(k) == "GAMEMODE" then k = "GAMEMODE|GM" end -- Special case where GM has the same functions as GAMEMODE
 		strHooks = strHooks .. "(("..string.upper(k).."|self)(\\.|:))("
 		for _, func in pairs(v) do
 			strHooks = strHooks .. func .. "|"
