@@ -363,7 +363,9 @@ local function GenerateSublimeStrings()
 
 	for k,v in pairs(merged.libraries) do
 		for a, b in pairs(v) do
-			completions:Write('\t\t{ "trigger": "'.. k ..'.'..b.. '", "contents": "'.. k ..'.'.. b ..'(${1})" },\n')
+			local func = k == "_G" and b or (k .. '.' .. b)
+
+			completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "'.. func ..'(${1})" },\n')
 		end
 	end
 
