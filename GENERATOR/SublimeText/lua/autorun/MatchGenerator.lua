@@ -384,9 +384,9 @@ local function GenerateSublimeStrings()
 	local doubleMethods = {} -- Some classes have the same methods. We want them to be in there only once
 	for k,v in pairs(merged.metamethods) do
 		for _, func in pairs(v) do
-			if table.HasValue(doubleMethods, func) then continue end
+			if doubleMethods[func] then continue end
 			completions:Write('\t\t{ "trigger": ":'.. func ..'", "contents": ":'.. func ..'(${1})" },\n')
-			table.insert(doubleMethods, func)
+			doubleMethods[func] = true
 		end
 	end
 
