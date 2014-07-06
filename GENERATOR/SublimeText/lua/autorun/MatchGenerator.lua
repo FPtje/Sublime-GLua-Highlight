@@ -357,18 +357,25 @@ local function GenerateSublimeStrings()
 		"in", "else", "return", "false", "true", "break", "or", "and",
 ]])
 
+	local doubleMethods = {} -- Some classes have the same methods. We want them to be in there only once
 	for k,v in pairs(merged.globalfunctions) do
+		if doubleMethods[v] then continue end
+		doubleMethods[v] = true
+
 		completions:Write('\t\t{ "trigger": "'.. v ..'", "contents": "'.. v ..'(${1})" },\n')
 	end
 
 	for k,v in pairs(merged.libraries) do
 		for a, b in pairs(v) do
 			local func = k == "_G" and b or (k .. '.' .. b)
+			if doubleMethods[func] then continue end
+			doubleMethods[func] = true
 
 			completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "'.. func ..'(${1})" },\n')
 		end
 	end
 
+	local seenHooks = {}
 	for k,v in pairs(merged.hooks) do
 		if string.upper(k) == "GAMEMODE" then
 			for _, func in pairs(v) do
@@ -376,17 +383,21 @@ local function GenerateSublimeStrings()
 			end
 		else
 			for _, func in pairs(v) do
-				completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "function '.. k ..':'.. func ..'(${1})\\n\\t${2}\\nend" },\n')
+				-- store only one hook in total (SWEP:OnRemove, ENT:OnRemove, TOOL:OnRemove -> OnRemove)
+				if seenHooks[func] then continue end
+				seenHooks[func] = true
+
+				completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "' .. func .. '" },\n')
 			end
 		end
 	end
 
-	local doubleMethods = {} -- Some classes have the same methods. We want them to be in there only once
 	for k,v in pairs(merged.metamethods) do
 		for _, func in pairs(v) do
 			if doubleMethods[func] then continue end
-			completions:Write('\t\t{ "trigger": ":'.. func ..'", "contents": ":'.. func ..'(${1})" },\n')
 			doubleMethods[func] = true
+
+			completions:Write('\t\t{ "trigger": "'.. func ..'", "contents": "'.. func ..'(${1})" },\n')
 		end
 	end
 
