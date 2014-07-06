@@ -247,7 +247,7 @@
 		<!-- Important constants -->
 		<dict>
 			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(false|nil|true|_G|_R|_VERSION|self|CLIENT|SERVER|GAMEMODE|EFFECT|GM|SWEP|TOOL|ENT|math\.(pi|huge))\b|(?&lt;![.])\.{3}(?!\.)</string>
+			<string>(?&lt;![^.]\.|:)\b(false|nil|true|_G|_R|_VERSION|self|math\.(pi|huge))\b|(?&lt;![.])\.{3}(?!\.)</string>
 			<key>name</key>
 			<string>constant.language.lua</string>
 		</dict>
@@ -290,6 +290,13 @@
 		<dict>
 			<key>match</key>
 			<string>(?&lt;![^.]\.|:)\b(DIconLayout|DMenuOptionCVar|DPanelList|DListView_Line|DNumSlider|DPanelOverlay|DListView_ColumnPlain|DDragBase|DIconBrowser|DHTML|DCategoryList|DImage|DTextEntry|DListView_DraggerBar|DColorMixer|DFrame|DCheckBox|DColorCombo|DScrollBarGrip|Slider|DHorizontalDivider|DSlider|DForm|DNumPad|DListViewLine|DPanelSelect|DListView_Column|DListViewHeaderLabel|DDrawer|DScrollPanel|DListBoxItem|DListView|DForm|DImageButton|DListLayout|DBinder|DNotify|DColorButton|VoiceNotify|DColorPalette|DNumberScratch|DImage|DListViewLabel|DProperty_Int|DProperty_VectorColor|DRGBPicker|DEntityProperties|DProperty_Float|DProperty_Boolean|DVScrollBar|DHTMLControls|DVerticalDivider|DVerticalDividerBar|DNumberWang|DTree_Node_Button|DLabelEditable|DTree_Node|DGrid|DButton|DExpandButton|DKillIcon|DMenu|DCategoryHeader|DTooltip|DTileLayout|DModelSelect|DSprite|DSizeToContents|DShape|DModelSelectMulti|DMenuOption|DProperty_Generic|DMenuBar|DCheckBoxLabel|DPropertySheet|DTab|DProperties|DAlphaBar|DProgress|DModelPanel|DFileBrowser|DColorCube|Button|DListBox|DAdjustableModelPanel|DComboBox|DColumnSheet|DButton|DHorizontalDividerBar|DBubbleContainer|DTree|DLabelURL|DHorizontalScroller|derma|spawnmenu|gui|hook|usermessage|undo|scripted_ents|gameevent|file|constraint|search|gamemode|menubar|motionsensor|hammer|vgui|gmod|duplicator|language|input|ai_task|effects|resource|draw|umsg|cookie|achievements|concommand|killicon|timer|os|cvars|string|debug|debugoverlay|gmsave|matproxy|coroutine|markup|team|http|cleanup|ents|baseclass|saverestore|video|game|physenv|notification|chat|bit|jit|numpad|mesh|weapons|skin|steamworks|gwen|surface|cam|ai_schedule|controlpanel|render|package|player|menu|halo|dragndrop|list|util|sound|player_manager|gamemode|presets|sql|drive|properties|system|math|widgets|net|_g|construct|engine|table|frame_blend|ai|navmesh)\b|(?&lt;![.])\.{3}(?!\.)</string>
+			<key>name</key>
+			<string>constant.language.lua</string>
+		</dict>
+		<!-- important constants -->
+		<dict>
+			<key>match</key>
+			<string>\b(CLIENT|SERVER|GAMEMODE|EFFECT|GM|SWEP|TOOL|ENT)\b</string>
 			<key>name</key>
 			<string>constant.language.lua</string>
 		</dict>
