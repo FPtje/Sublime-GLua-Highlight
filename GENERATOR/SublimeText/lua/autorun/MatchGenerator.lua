@@ -33,6 +33,11 @@ local function getLibraries()
 	for k,v in pairs(_G) do
 		if type(v) ~= "table" or ignoreLibraries[v] then continue end -- If it's not a table, then it's not a library by definition
 
+		-- the "library" is actually the metatable of a panel, don't put it in the libraries list
+		if CLIENT and vgui.GetControlTable(k) then
+			continue
+		end
+
 		for name, value in pairs(v) do -- All libraries have functions. Some have other members
 			if type(value) == "function" then
 				libraries[k] = libraries[k] or {}
@@ -97,15 +102,34 @@ NOTE: This doesn't get the hooks!
 local function getMetaMethods()
 	local objects = {} -- All the classes that exist, with their respective methods
 
+	local panelFunctionsSeen = {} -- Panels have a different case
 	for k,v in pairs(debug.getregistry()) do
 		-- All metamethods are in non-empty tables in _R. These tables always have a string as name
-		if type(v) != "table" or type(k) ~= "string" then continue end
+		if type(v) != "table" or type(k) ~= "string" or k == "Panel" then continue end -- Skip panel metafunctions
+
 
 		for name, func in pairs(v) do
 			if type(func) == "function" then
 				objects[k] = objects[k] or {}
 				table.insert(objects[k], name)
+
+				if k == "Panel" then panelFunctionsSeen[name] = true end
 			end
+		end
+	end
+
+	if not CLIENT then return objects end
+
+	-- Several panel objects have their own meta functions. Put them all under Panel to highlight them anyway
+	objects["Panel"] = objects["Panel"] or {}
+	for k,v in pairs(_G) do
+		if not vgui.GetControlTable(k) or not istable(v) then continue end
+
+		for name, func in pairs(v) do
+			if not isfunction(func) or panelFunctionsSeen[name] then continue end
+
+			panelFunctionsSeen[name] = true
+			table.insert(objects["Panel"], name)
 		end
 	end
 
