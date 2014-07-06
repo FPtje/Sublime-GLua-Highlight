@@ -368,7 +368,7 @@ local function GenerateSublimeStrings()
 	for k,v in pairs(merged.libraries) do
 		for a, b in pairs(v) do
 			local func = k == "_G" and b or (k .. '.' .. b)
-			if doubleMethods[func] then continue end
+			if doubleMethods[func] or k == "GAMEMODE" then continue end
 			doubleMethods[func] = true
 
 			completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "'.. func ..'(${1})" },\n')
@@ -377,18 +377,12 @@ local function GenerateSublimeStrings()
 
 	local seenHooks = {}
 	for k,v in pairs(merged.hooks) do
-		if string.upper(k) == "GAMEMODE" then
-			for _, func in pairs(v) do
-				completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "hook.Add(\\"'..func..'\\", ${1}, ${2})" },\n')
-			end
-		else
-			for _, func in pairs(v) do
-				-- store only one hook in total (SWEP:OnRemove, ENT:OnRemove, TOOL:OnRemove -> OnRemove)
-				if seenHooks[func] then continue end
-				seenHooks[func] = true
+		for _, func in pairs(v) do
+			-- store only one hook in total (SWEP:OnRemove, ENT:OnRemove, TOOL:OnRemove -> OnRemove)
+			if seenHooks[func] then continue end
+			seenHooks[func] = true
 
-				completions:Write('\t\t{ "trigger": "'.. func .. '", "contents": "' .. func .. '" },\n')
-			end
+			completions:Write('\t\t"'.. func .. '",\n')
 		end
 	end
 
