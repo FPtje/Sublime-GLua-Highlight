@@ -285,7 +285,7 @@ local function GenerateSublimeStrings()
 	for k,v in pairs(merged.globalfunctions) do
 		strGlobalFuncs = strGlobalFuncs .. v .. "|"
 	end
-	file.Write("sublime_3globalfunctions.txt", string.sub(strGlobalFuncs, 1, -2) .. ")\\b(?=[( {])")
+	file.Write("sublime_3globalfunctions.txt", string.sub(strGlobalFuncs, 1, -2) .. ")\\b(?=[(\s{])")
 
 	-- Meta methods
 	local strMeta = "\\b("
@@ -296,7 +296,7 @@ local function GenerateSublimeStrings()
 			end
 		end
 	end
-	file.Write("sublime_4metafunctions.txt", string.sub(strMeta, 1, -2) .. ")\\b(?=[( {])")
+	file.Write("sublime_4metafunctions.txt", string.sub(strMeta, 1, -2) .. ")\\b(?=[(\s{])")
 
 	-- Hooks
 	local strHooks = "("
