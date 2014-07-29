@@ -1565,6 +1565,7 @@
 		"ClassName",
 		"DoImpactEffect",
 		"ViewModelFOV",
+		"UseHands",
 		"ViewModelFlip",
 		"NPCShoot_Primary",
 		"Ammo2",
