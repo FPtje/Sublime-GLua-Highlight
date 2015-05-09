@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[)
+	${1}
+end]]></content>
+	<tabTrigger>)</tabTrigger>
+	<scope>punctuation.definition.parameters.end.lua</scope>
+	<description>function</description>
+</snippet>
