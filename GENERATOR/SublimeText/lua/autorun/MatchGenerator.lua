@@ -72,26 +72,11 @@ function getEnumerations()
 
 	for k, v in next, _G do
 		if(type(v) == "number" and type(k) == "string" and k:upper() == k) then
-			enumerations[k] = k
+			table.insert(enumerations, k)
 		end
 	end
 
-	local grouped = {}
-
-	-- The grouping part
-	for k,v in SortedPairs(enumerations) do
-		local parts = string.Explode("_", v)
-
-		for num, part in pairs(parts) do
-			local partTable = grouped -- Find the right table in the table tree to put it in (works in-depth)
-			for i = 1, num, 1 do
-				partTable[parts[i]] = partTable[parts[i]] or {}
-				partTable = partTable[parts[i]]
-			end
-		end
-	end
-
-	return grouped
+	return enumerations
 end
 
 /*---------------------------------------------------------------------------
@@ -259,8 +244,19 @@ local function MergeFiles()
 		return recursiveMerge(shared, cl)
 	end
 
+	local function mergeEnums(filename)
+		local sv = readGlon(filename.."_sv.txt")
+		local cl = readGlon(filename.."_cl.txt")
 
-	return {enums = mergeSingle("enums"),
+		local work = {}
+		for k,v in pairs(sv) do work[v] = v end
+		for k,v in pairs(cl) do work[v] = v end
+
+		return work
+	end
+
+
+	return {enums = mergeEnums("enums"),
 		libraries = mergeSingle("libraries"),
 		globalfunctions = mergeSingle("globalfunctions"),
 		metamethods = mergeSingle("metamethods"),
@@ -274,8 +270,28 @@ Note: the ones you should use always start with sublime_. The other files are in
 local function GenerateSublimeStrings()
 	local merged = MergeFiles() -- First merge the files
 
+	local function groupedEnums()
+		local grouped = {}
+
+		-- The grouping part
+		for k,v in SortedPairs(merged.enums) do
+			local parts = string.Explode("_", v)
+
+			for num, part in pairs(parts) do
+				local partTable = grouped -- Find the right table in the table tree to put it in (works in-depth)
+				for i = 1, num, 1 do
+					partTable[parts[i]] = partTable[parts[i]] or {}
+					partTable = partTable[parts[i]]
+				end
+			end
+		end
+
+		return grouped
+	end
+
 	-- Convert enumerations table to sublime Text recognized string
 	local function enumString(tbl)
+
 		local enums = ""
 		for k,v in pairs(tbl) do
 			if table.Count(v) > 1 then
@@ -290,7 +306,7 @@ local function GenerateSublimeStrings()
 		return string.sub(enums, 1, -2)
 	end
 
-	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b("..enumString(merged.enums)..")\\b|(?&lt;![.])\\.{3}(?!\\.)")
+	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b("..enumString(groupedEnums())..")\\b|(?&lt;![.])\\.{3}(?!\\.)")
 
 
 	-- Libraries
@@ -393,6 +409,10 @@ local function GenerateSublimeStrings()
 
 			completions:Write('\t\t{ "trigger": "'.. func ..'", "contents": "'.. func ..'(${1})" },\n')
 		end
+	end
+
+	for k,v in SortedPairsByValue(merged.enums) do
+		completions:Write('\t\t{ "trigger": "'.. v ..'", "contents": "'.. v ..'" },\n')
 	end
 
 
