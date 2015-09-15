@@ -1,4 +1,6 @@
-Installing throught the package manager:
+# GLua syntax highlighting in sublime
+
+## Installing throught the package manager:
 1. Open Sublime
 2. Press Ctrl + Shift + P
 3. type install and press enter
@@ -14,7 +16,7 @@ This can be done by adding "Lua" to the ignored_packages setting. If you don't k
 	"ignored_packages": ["Vintage", "Lua"]
 Note how "Vintage" is also there. It's a package that's disabled by default.
 
-Installing manually:
+## Installing manually:
 
 1. Open sublime
 2. Select Preferences > Browse Packages...
@@ -24,3 +26,7 @@ Installing manually:
 
 WHEN INSTALLED:
 Open a lua file and go to view > Apply Syntax Highlighting > Gmod Lua. This file and the next one you'll open will have the GLua syntax.
+
+## Credits
+
+Thanks to @JohnnyCrazy for his wiki scraper that provides the autocomplete entries!
