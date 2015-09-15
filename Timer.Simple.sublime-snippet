@@ -1,8 +1,0 @@
-<snippet>
-	<content><![CDATA[timer.Simple(${1:1}, ${2:function(${3:})
-	${4:}
-end})]]></content>
-	<tabTrigger>timer.Simple</tabTrigger>
-	<scope>source.lua</scope>
-	<description>timer.Simple</description>
-</snippet>

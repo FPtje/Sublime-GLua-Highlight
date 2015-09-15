@@ -1,6 +1,0 @@
-<snippet>
-	<content><![CDATA[hook.Remove("${1:Think}", "${2:Press tab to enter this value}")]]></content>
-<tabTrigger>hook.Remove</tabTrigger>
-	<scope>source.lua</scope>
-	<description>hook.Remove(Hook ID, Hook Name)</description>
-</snippet>
