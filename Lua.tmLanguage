@@ -277,7 +277,7 @@
 		<!-- Important constants -->
 		<dict>
 			<key>match</key>
-			<string>(?&lt;![^.]\.|:)\b(false|nil|true|_G|_R|_VERSION|self|math\.(pi|huge))\b|(?&lt;![.])\.{3}(?!\.)</string>
+			<string>(?&lt;![^.]\.|:)\b(NULL|false|nil|true|_G|_R|_VERSION|self|math\.(pi|huge))\b|(?&lt;![.])\.{3}(?!\.)</string>
 			<key>name</key>
 			<string>constant.language.lua</string>
 		</dict>
