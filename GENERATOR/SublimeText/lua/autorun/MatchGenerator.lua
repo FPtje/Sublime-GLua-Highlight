@@ -141,7 +141,7 @@ local function getHooks()
 
 	hooks["SWEP"] = hooksFromTable(weapons.Get("weapon_base")) -- All the weapon hooks
 	hooks["TOOL"] = hooksFromTable(weapons.Get("gmod_tool")) -- All the tool hooks
-	hooks["GAMEMODE"] = hooksFromTable(GAMEMODE.BaseClass) -- All the gamemode hooks
+	hooks["GAMEMODE"] = table.Merge(hooksFromTable(GAMEMODE.BaseClass), {"ShowHelp", "ShowSpare1", "ShowSpare2"})  -- All the gamemode hooks, some added manually
 	hooks["EFFECT"] = {"Init", "Think", "Render"} -- Effects. Hard coded until a method is found to generate them
 
 	-- Entities
