@@ -106,7 +106,7 @@
 		<!-- hexadecemal/decimal constants -->
 		<dict>
 			<key>match</key>
-			<string>(?&lt;![\d.])\s0x[a-fA-F\d]+|\b\d+(\.\d+)?([eE]-?\d+)?|\.\d+([eE]-?\d+)?</string>
+			<string>\b0x[a-fA-F\d]+|\b\d+(\.\d+)?([eE]-?\d+)?|\.\d+([eE]-?\d+)?</string>
 			<key>name</key>
 			<string>constant.numeric.lua</string>
 		</dict>
