@@ -1,5 +1,5 @@
 {
-  "scope": "source.lua - keyword.control.lua - constant.language.lua - string",
+  "source": "source.lua - keyword.control.lua - constant.language.lua - string",
   "completions": [
     "in",
     "else",
@@ -842,11 +842,11 @@
     },
     {
       "trigger": "cookie.GetNumber",
-      "contents": "cookie.GetNumber(${1:string name},${2:number default})"
+      "contents": "cookie.GetNumber(${1:string name},${2:any default=nil})"
     },
     {
       "trigger": "cookie.GetString",
-      "contents": "cookie.GetString(${1:string name},${2:string default})"
+      "contents": "cookie.GetString(${1:string name},${2:any default=nil})"
     },
     {
       "trigger": "cookie.Set",
@@ -894,7 +894,7 @@
     },
     {
       "trigger": "cvars.Number",
-      "contents": "cvars.Number(${1:string cvar})"
+      "contents": "cvars.Number(${1:string cvar},${2:any default=nil})"
     },
     {
       "trigger": "cvars.OnConVarChanged",
@@ -906,7 +906,7 @@
     },
     {
       "trigger": "cvars.String",
-      "contents": "cvars.String(${1:string cvar})"
+      "contents": "cvars.String(${1:string cvar},${2:any default=nil})"
     },
     {
       "trigger": "debug.debug",
@@ -918,7 +918,7 @@
     },
     {
       "trigger": "debug.gethook",
-      "contents": "debug.gethook()"
+      "contents": "debug.gethook(${1:thread thread=nil})"
     },
     {
       "trigger": "debug.getinfo",
@@ -1114,7 +1114,7 @@
     },
     {
       "trigger": "draw.SimpleText",
-      "contents": "draw.SimpleText(${1:string text},${2:string font},${3:number x},${4:number y},${5:table color},${6:number xAlign=0},${7:number yAlign=4})"
+      "contents": "draw.SimpleText(${1:string text},${2:string font},${3:number x},${4:number y},${5:table color},${6:number xAlign=TEXT_ALIGN_LEFT},${7:number yAlign=TEXT_ALIGN_TOP})"
     },
     {
       "trigger": "draw.SimpleTextOutlined",
@@ -1446,7 +1446,7 @@
     },
     {
       "trigger": "file.Find",
-      "contents": "file.Find(${1:string name},${2:string path},${3:string sorting=nameasc})"
+      "contents": "file.Find(${1:string name},${2:string path},${3:string sorting=namedesc})"
     },
     {
       "trigger": "file.IsDir",
@@ -1745,6 +1745,10 @@
       "contents": "halo.Render(${1:table entry})"
     },
     {
+      "trigger": "halo.RenderedEntity",
+      "contents": "halo.RenderedEntity()"
+    },
+    {
       "trigger": "hammer.SendCommand",
       "contents": "hammer.SendCommand(${1:string cmd})"
     },
@@ -1814,7 +1818,11 @@
     },
     {
       "trigger": "input.LookupBinding",
-      "contents": "input.LookupBinding(${1:string binding})"
+      "contents": "input.LookupBinding(${1:string binding},${2:boolean exact=false})"
+    },
+    {
+      "trigger": "input.LookupKeyBinding",
+      "contents": "input.LookupKeyBinding(${1:number key})"
     },
     {
       "trigger": "input.SetCursorPos",
@@ -2022,11 +2030,11 @@
     },
     {
       "trigger": "math.log",
-      "contents": "math.log(${1:number value},${2:number degree=math.exp(1)})"
+      "contents": "math.log(${1:number x},${2:number base=math.exp(1)})"
     },
     {
       "trigger": "math.log10",
-      "contents": "math.log10(${1:number value})"
+      "contents": "math.log10(${1:number x})"
     },
     {
       "trigger": "math.max",
@@ -2253,6 +2261,18 @@
       "contents": "navmesh.GetAllNavAreas()"
     },
     {
+      "trigger": "navmesh.GetEditCursorPosition",
+      "contents": "navmesh.GetEditCursorPosition()"
+    },
+    {
+      "trigger": "navmesh.GetMarkedArea",
+      "contents": "navmesh.GetMarkedArea()"
+    },
+    {
+      "trigger": "navmesh.GetMarkedLadder",
+      "contents": "navmesh.GetMarkedLadder()"
+    },
+    {
       "trigger": "navmesh.GetNavArea",
       "contents": "navmesh.GetNavArea(${1:Vector pos},${2:number beneathLimit})"
     },
@@ -2270,7 +2290,7 @@
     },
     {
       "trigger": "navmesh.GetNearestNavArea",
-      "contents": "navmesh.GetNearestNavArea(${1:Vector pos},${2:boolean anyZ=false},${3:number maxDist=10000},${4:boolean checkLOS=false},${5:boolean checkGround=true},${6:number team=TEAM_ANY (-2)})"
+      "contents": "navmesh.GetNearestNavArea(${1:Vector pos},${2:boolean anyZ=false},${3:number maxDist=10000},${4:boolean checkLOS=false},${5:boolean checkGround=true},${6:number team=TEAM_ANY=-2})"
     },
     {
       "trigger": "navmesh.GetPlayerSpawnName",
@@ -2279,6 +2299,30 @@
     {
       "trigger": "navmesh.IsGenerating",
       "contents": "navmesh.IsGenerating()"
+    },
+    {
+      "trigger": "navmesh.IsLoaded",
+      "contents": "navmesh.IsLoaded()"
+    },
+    {
+      "trigger": "navmesh.Load",
+      "contents": "navmesh.Load()"
+    },
+    {
+      "trigger": "navmesh.Reset",
+      "contents": "navmesh.Reset()"
+    },
+    {
+      "trigger": "navmesh.Save",
+      "contents": "navmesh.Save()"
+    },
+    {
+      "trigger": "navmesh.SetMarkedArea",
+      "contents": "navmesh.SetMarkedArea(${1:CNavArea area})"
+    },
+    {
+      "trigger": "navmesh.SetMarkedLadder",
+      "contents": "navmesh.SetMarkedLadder(${1:CNavLadder area})"
     },
     {
       "trigger": "navmesh.SetPlayerSpawnName",
@@ -2706,7 +2750,7 @@
     },
     {
       "trigger": "render.CopyRenderTargetToTexture",
-      "contents": "render.CopyRenderTargetToTexture()"
+      "contents": "render.CopyRenderTargetToTexture(${1:IMaterial Material})"
     },
     {
       "trigger": "render.CopyTexture",
@@ -3546,7 +3590,7 @@
     },
     {
       "trigger": "string.find",
-      "contents": "string.find(${1:string haystack},${2:string needle},${3:number startPos=0 or 1},${4:boolean noPatterns=false})"
+      "contents": "string.find(${1:string haystack},${2:string needle},${3:number startPos=1},${4:boolean noPatterns=false})"
     },
     {
       "trigger": "string.format",
@@ -3821,6 +3865,10 @@
       "contents": "system.IsOSX()"
     },
     {
+      "trigger": "system.IsWindowed",
+      "contents": "system.IsWindowed()"
+    },
+    {
       "trigger": "system.IsWindows",
       "contents": "system.IsWindows()"
     },
@@ -4090,7 +4138,7 @@
     },
     {
       "trigger": "timer.Destroy",
-      "contents": "timer.Destroy(${1:any identifier})"
+      "contents": "timer.Destroy(${1:string identifier})"
     },
     {
       "trigger": "timer.Exists",
@@ -4102,7 +4150,7 @@
     },
     {
       "trigger": "timer.Remove",
-      "contents": "timer.Remove(${1:any identifier})"
+      "contents": "timer.Remove(${1:string identifier})"
     },
     {
       "trigger": "timer.RepsLeft",
@@ -5089,6 +5137,10 @@
       "contents": "IsInGame()"
     },
     {
+      "trigger": "ismatrix",
+      "contents": "ismatrix(${1:any variable})"
+    },
+    {
       "trigger": "IsMounted",
       "contents": "IsMounted(${1:string game})"
     },
@@ -5905,6 +5957,10 @@
       "contents": "GetJumpHeight()"
     },
     {
+      "trigger": "GetMaxJumpHeight",
+      "contents": "GetMaxJumpHeight()"
+    },
+    {
       "trigger": "GetMaxYawRate",
       "contents": "GetMaxYawRate()"
     },
@@ -5915,6 +5971,10 @@
     {
       "trigger": "GetVelocity",
       "contents": "GetVelocity()"
+    },
+    {
+      "trigger": "IsAreaTraversable",
+      "contents": "IsAreaTraversable(${1:CNavArea area})"
     },
     {
       "trigger": "IsAscendingOrDescendingLadder",
@@ -6277,6 +6337,10 @@
       "contents": "SetVelocity(${1:Vector velocity})"
     },
     {
+      "trigger": "ComputeAdjacentConnectionHeightChange",
+      "contents": "ComputeAdjacentConnectionHeightChange(${1:CNavArea navarea})"
+    },
+    {
       "trigger": "ComputeDirection",
       "contents": "ComputeDirection(${1:Vector pos})"
     },
@@ -6327,6 +6391,10 @@
     {
       "trigger": "GetCorner",
       "contents": "GetCorner(${1:number cornerid})"
+    },
+    {
+      "trigger": "GetCostSoFar",
+      "contents": "GetCostSoFar()"
     },
     {
       "trigger": "GetExposedSpots",
@@ -6421,8 +6489,16 @@
       "contents": "IsVisible(${1:Vector pos})"
     },
     {
+      "trigger": "SetAttributes",
+      "contents": "SetAttributes(${1:number attribs})"
+    },
+    {
       "trigger": "GetID",
       "contents": "GetID()"
+    },
+    {
+      "trigger": "GetLength",
+      "contents": "GetLength()"
     },
     {
       "trigger": "GetNormal",
@@ -6439,6 +6515,90 @@
     {
       "trigger": "IsValid",
       "contents": "IsValid()"
+    },
+    {
+      "trigger": "AddControlPoint",
+      "contents": "AddControlPoint(${1:number cpID},${2:Entity ent},${3:number partAttachment},${4:number entAttachment=0},${5:Vector offset=Vector( 0, 0, 0 )})"
+    },
+    {
+      "trigger": "GetAutoUpdateBBox",
+      "contents": "GetAutoUpdateBBox()"
+    },
+    {
+      "trigger": "GetEffectName",
+      "contents": "GetEffectName()"
+    },
+    {
+      "trigger": "GetHighestControlPoint",
+      "contents": "GetHighestControlPoint()"
+    },
+    {
+      "trigger": "GetOwner",
+      "contents": "GetOwner()"
+    },
+    {
+      "trigger": "IsFinished",
+      "contents": "IsFinished()"
+    },
+    {
+      "trigger": "IsValid",
+      "contents": "IsValid()"
+    },
+    {
+      "trigger": "IsViewModelEffect",
+      "contents": "IsViewModelEffect()"
+    },
+    {
+      "trigger": "Restart",
+      "contents": "Restart()"
+    },
+    {
+      "trigger": "SetControlPoint",
+      "contents": "SetControlPoint(${1:number cpID},${2:Vector value})"
+    },
+    {
+      "trigger": "SetControlPointEntity",
+      "contents": "SetControlPointEntity(${1:number child},${2:Entity parent})"
+    },
+    {
+      "trigger": "SetControlPointForwardVector",
+      "contents": "SetControlPointForwardVector(${1:number cpID},${2:Vector forward})"
+    },
+    {
+      "trigger": "SetControlPointOrientation",
+      "contents": "SetControlPointOrientation(${1:number cpID},${2:Vector forward},${3:Vector right},${4:Vector up})"
+    },
+    {
+      "trigger": "SetControlPointParent",
+      "contents": "SetControlPointParent(${1:number child},${2:number parent})"
+    },
+    {
+      "trigger": "SetControlPointRightVector",
+      "contents": "SetControlPointRightVector(${1:number cpID},${2:Vector right})"
+    },
+    {
+      "trigger": "SetControlPointUpVector",
+      "contents": "SetControlPointUpVector(${1:number cpID},${2:Vector upward})"
+    },
+    {
+      "trigger": "SetIsViewModelEffect",
+      "contents": "SetIsViewModelEffect(${1:boolean isViewModel})"
+    },
+    {
+      "trigger": "SetSortOrigin",
+      "contents": "SetSortOrigin(${1:Vector origin})"
+    },
+    {
+      "trigger": "StartEmission",
+      "contents": "StartEmission(${1:boolean infiniteOnly=false})"
+    },
+    {
+      "trigger": "StopEmission",
+      "contents": "StopEmission(${1:boolean infiniteOnly=false},${2:boolean removeAllParticles=false},${3:boolean wakeOnStop=false})"
+    },
+    {
+      "trigger": "StopEmissionAndDestroyImmediately",
+      "contents": "StopEmissionAndDestroyImmediately()"
     },
     {
       "trigger": "GetBool",
@@ -6789,6 +6949,18 @@
       "contents": "AddFlags(${1:number flag})"
     },
     {
+      "trigger": "AddGesture",
+      "contents": "AddGesture(${1:number activity},${2:boolean autokill=true})"
+    },
+    {
+      "trigger": "AddGestureSequence",
+      "contents": "AddGestureSequence(${1:number sequence},${2:boolean autokill=true})"
+    },
+    {
+      "trigger": "AddLayeredSequence",
+      "contents": "AddLayeredSequence(${1:number sequence},${2:number priority})"
+    },
+    {
       "trigger": "AddSolidFlags",
       "contents": "AddSolidFlags(${1:number flags})"
     },
@@ -6842,7 +7014,7 @@
     },
     {
       "trigger": "CreateParticleEffect",
-      "contents": "CreateParticleEffect(${1:string particle},${2:number attachment})"
+      "contents": "CreateParticleEffect(${1:string particle},${2:number attachment},${3:table options=nil})"
     },
     {
       "trigger": "CreateShadow",
@@ -7179,6 +7351,18 @@
     {
       "trigger": "GetKeyValues",
       "contents": "GetKeyValues()"
+    },
+    {
+      "trigger": "GetLayerCycle",
+      "contents": "GetLayerCycle(${1:number layerID})"
+    },
+    {
+      "trigger": "GetLayerDuration",
+      "contents": "GetLayerDuration(${1:number layerID})"
+    },
+    {
+      "trigger": "GetLayerWeight",
+      "contents": "GetLayerWeight(${1:number layerID})"
     },
     {
       "trigger": "GetLocalAngles",
@@ -7669,6 +7853,10 @@
       "contents": "IsPlayerHolding()"
     },
     {
+      "trigger": "IsPlayingGesture",
+      "contents": "IsPlayingGesture(${1:number activity})"
+    },
+    {
       "trigger": "IsRagdoll",
       "contents": "IsRagdoll()"
     },
@@ -7679,6 +7867,10 @@
     {
       "trigger": "IsValid",
       "contents": "IsValid()"
+    },
+    {
+      "trigger": "IsValidLayer",
+      "contents": "IsValidLayer(${1:number layerID})"
     },
     {
       "trigger": "IsVehicle",
@@ -7861,6 +8053,10 @@
       "contents": "RemoveAllDecals()"
     },
     {
+      "trigger": "RemoveAllGestures",
+      "contents": "RemoveAllGestures()"
+    },
+    {
       "trigger": "RemoveCallOnRemove",
       "contents": "RemoveCallOnRemove(${1:string identifier})"
     },
@@ -7881,6 +8077,10 @@
       "contents": "RemoveFromMotionController(${1:PhysObj physObj})"
     },
     {
+      "trigger": "RemoveGesture",
+      "contents": "RemoveGesture(${1:number activity})"
+    },
+    {
       "trigger": "RemoveSolidFlags",
       "contents": "RemoveSolidFlags(${1:number flags})"
     },
@@ -7898,7 +8098,7 @@
     },
     {
       "trigger": "RestartGesture",
-      "contents": "RestartGesture(${1:number sequence})"
+      "contents": "RestartGesture(${1:number activity},${2:boolean addIfMissing=true},${3:boolean autokill=true})"
     },
     {
       "trigger": "SelectWeightedSequence",
@@ -8073,6 +8273,34 @@
       "contents": "SetLagCompensated(${1:boolean enable})"
     },
     {
+      "trigger": "SetLayerBlendIn",
+      "contents": "SetLayerBlendIn(${1:number layerID},${2:number blendIn})"
+    },
+    {
+      "trigger": "SetLayerBlendOut",
+      "contents": "SetLayerBlendOut(${1:number layerID},${2:number blendOut})"
+    },
+    {
+      "trigger": "SetLayerCycle",
+      "contents": "SetLayerCycle(${1:number layerID},${2:number duration})"
+    },
+    {
+      "trigger": "SetLayerDuration",
+      "contents": "SetLayerDuration(${1:number layerID},${2:number duration})"
+    },
+    {
+      "trigger": "SetLayerLooping",
+      "contents": "SetLayerLooping(${1:number layerID},${2:boolean loop})"
+    },
+    {
+      "trigger": "SetLayerPlaybackRate",
+      "contents": "SetLayerPlaybackRate(${1:number layerID},${2:number rate})"
+    },
+    {
+      "trigger": "SetLayerWeight",
+      "contents": "SetLayerWeight(${1:number layerID},${2:number weight})"
+    },
+    {
       "trigger": "SetLegacyTransform",
       "contents": "SetLegacyTransform(${1:boolean enabled})"
     },
@@ -8098,7 +8326,7 @@
     },
     {
       "trigger": "SetMaterial",
-      "contents": "SetMaterial(${1:string materialName})"
+      "contents": "SetMaterial(${1:string materialName},${2:boolean forceMaterial=false})"
     },
     {
       "trigger": "SetMaxHealth",
@@ -8290,11 +8518,11 @@
     },
     {
       "trigger": "SetRenderClipPlane",
-      "contents": "SetRenderClipPlane(${1:Vector },${2:number })"
+      "contents": "SetRenderClipPlane(${1:Vector planeNormal},${2:number planePosition})"
     },
     {
       "trigger": "SetRenderClipPlaneEnabled",
-      "contents": "SetRenderClipPlaneEnabled(${1:boolean })"
+      "contents": "SetRenderClipPlaneEnabled(${1:boolean enabled})"
     },
     {
       "trigger": "SetRenderFX",
@@ -8382,7 +8610,7 @@
     },
     {
       "trigger": "SetWeaponModel",
-      "contents": "SetWeaponModel(${1:string viewModel},${2:Weapon weapon})"
+      "contents": "SetWeaponModel(${1:string viewModel},${2:Weapon weapon=NULL})"
     },
     {
       "trigger": "SkinCount",
@@ -8401,6 +8629,10 @@
       "contents": "StartMotionController()"
     },
     {
+      "trigger": "StopAndDestroyParticles",
+      "contents": "StopAndDestroyParticles()"
+    },
+    {
       "trigger": "StopLoopingSound",
       "contents": "StopLoopingSound(${1:number id})"
     },
@@ -8415,6 +8647,14 @@
     {
       "trigger": "StopParticles",
       "contents": "StopParticles()"
+    },
+    {
+      "trigger": "StopParticlesNamed",
+      "contents": "StopParticlesNamed(${1:string name})"
+    },
+    {
+      "trigger": "StopParticlesWithNameAndAttachment",
+      "contents": "StopParticlesWithNameAndAttachment(${1:string name},${2:number attachment})"
     },
     {
       "trigger": "StopSound",
@@ -8470,7 +8710,7 @@
     },
     {
       "trigger": "Weapon_SetActivity",
-      "contents": "Weapon_SetActivity(${1:number act},${2:number })"
+      "contents": "Weapon_SetActivity(${1:number act},${2:number duration})"
     },
     {
       "trigger": "Weapon_TranslateActivity",
@@ -8554,7 +8794,7 @@
     },
     {
       "trigger": "WriteByte",
-      "contents": "WriteByte(${1:number byte})"
+      "contents": "WriteByte(${1:number uint8})"
     },
     {
       "trigger": "WriteDouble",
@@ -8566,11 +8806,11 @@
     },
     {
       "trigger": "WriteLong",
-      "contents": "WriteLong(${1:number int})"
+      "contents": "WriteLong(${1:number int32})"
     },
     {
       "trigger": "WriteShort",
-      "contents": "WriteShort(${1:number short})"
+      "contents": "WriteShort(${1:number int16})"
     },
     {
       "trigger": "EnableLooping",
@@ -10086,7 +10326,7 @@
     },
     {
       "trigger": "SetContentAlignment",
-      "contents": "SetContentAlignment(${1:number Alignment})"
+      "contents": "SetContentAlignment(${1:number alignment})"
     },
     {
       "trigger": "SetConVar",
@@ -10110,7 +10350,7 @@
     },
     {
       "trigger": "SetDrawLanguageIDAtLeft",
-      "contents": "SetDrawLanguageIDAtLeft(${1:boolean })"
+      "contents": "SetDrawLanguageIDAtLeft(${1:boolean left})"
     },
     {
       "trigger": "SetDrawOnTop",
@@ -10398,11 +10638,15 @@
     },
     {
       "trigger": "Compute",
-      "contents": "Compute(${1:NextBot from},${2:Vector to})"
+      "contents": "Compute(${1:NextBot from},${2:Vector to},${3:function generator=nil})"
     },
     {
       "trigger": "Draw",
       "contents": "Draw()"
+    },
+    {
+      "trigger": "FirstSegment",
+      "contents": "FirstSegment()"
     },
     {
       "trigger": "GetAge",
@@ -10413,12 +10657,24 @@
       "contents": "GetClosestPosition(${1:Vector position})"
     },
     {
+      "trigger": "GetCurrentGoal",
+      "contents": "GetCurrentGoal()"
+    },
+    {
+      "trigger": "GetCursorData",
+      "contents": "GetCursorData()"
+    },
+    {
       "trigger": "GetCursorPosition",
       "contents": "GetCursorPosition()"
     },
     {
       "trigger": "GetEnd",
       "contents": "GetEnd()"
+    },
+    {
+      "trigger": "GetHindrance",
+      "contents": "GetHindrance()"
     },
     {
       "trigger": "GetLength",
@@ -10441,6 +10697,10 @@
       "contents": "IsValid()"
     },
     {
+      "trigger": "LastSegment",
+      "contents": "LastSegment()"
+    },
+    {
       "trigger": "MoveCursor",
       "contents": "MoveCursor(${1:number distance})"
     },
@@ -10449,12 +10709,20 @@
       "contents": "MoveCursorTo(${1:number distance})"
     },
     {
+      "trigger": "MoveCursorToClosestPosition",
+      "contents": "MoveCursorToClosestPosition(${1:Vector pos},${2:number type=0},${3:number alongLimit=0})"
+    },
+    {
       "trigger": "MoveCursorToEnd",
       "contents": "MoveCursorToEnd()"
     },
     {
       "trigger": "MoveCursorToStart",
       "contents": "MoveCursorToStart()"
+    },
+    {
+      "trigger": "ResetAge",
+      "contents": "ResetAge()"
     },
     {
       "trigger": "SetGoalTolerance",
@@ -11211,6 +11479,10 @@
     {
       "trigger": "IsSuperAdmin",
       "contents": "IsSuperAdmin()"
+    },
+    {
+      "trigger": "IsTimingOut",
+      "contents": "IsTimingOut()"
     },
     {
       "trigger": "IsTyping",
@@ -12197,6 +12469,14 @@
       "contents": "Translate(${1:Vector translation})"
     },
     {
+      "trigger": "AllowsAutoSwitchFrom",
+      "contents": "AllowsAutoSwitchFrom()"
+    },
+    {
+      "trigger": "AllowsAutoSwitchTo",
+      "contents": "AllowsAutoSwitchTo()"
+    },
+    {
       "trigger": "CallOnClient",
       "contents": "CallOnClient(${1:string function},${2:string arguments=\"\"})"
     },
@@ -12255,6 +12535,22 @@
     {
       "trigger": "GetSlotPos",
       "contents": "GetSlotPos()"
+    },
+    {
+      "trigger": "GetWeaponViewModel",
+      "contents": "GetWeaponViewModel()"
+    },
+    {
+      "trigger": "GetWeaponWorldModel",
+      "contents": "GetWeaponWorldModel()"
+    },
+    {
+      "trigger": "GetWeight",
+      "contents": "GetWeight()"
+    },
+    {
+      "trigger": "HasAmmo",
+      "contents": "HasAmmo()"
     },
     {
       "trigger": "IsCarriedByLocalPlayer",
@@ -12499,6 +12795,26 @@
     {
       "trigger": "Toggle",
       "contents": "Toggle()"
+    },
+    {
+      "trigger": "GetExpanded",
+      "contents": "GetExpanded()"
+    },
+    {
+      "trigger": "SetAnimTime",
+      "contents": "SetAnimTime(${1:number time})"
+    },
+    {
+      "trigger": "SetContents",
+      "contents": "SetContents(${1:Panel pnl})"
+    },
+    {
+      "trigger": "SetExpanded",
+      "contents": "SetExpanded(${1:boolean expanded=true})"
+    },
+    {
+      "trigger": "SetLabel",
+      "contents": "SetLabel(${1:string label})"
     },
     {
       "trigger": "GetRGB",
