@@ -1,5 +1,5 @@
 {
-  "source": "source.lua - keyword.control.lua - constant.language.lua - string",
+  "scope": "source.lua - keyword.control.lua - constant.language.lua - string",
   "completions": [
     "in",
     "else",
