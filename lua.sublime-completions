@@ -353,6 +353,7 @@
     "CanProperty",
     "CanTool",
     "ContentSidebarSelection",
+    "ContextMenuCreated",
     "PersistenceLoad",
     "PersistenceSave",
     "PlayerGiveSWEP",
@@ -1541,6 +1542,10 @@
       "contents": "game.GetAmmoName(${1:number id})"
     },
     {
+      "trigger": "game.GetIPAddress",
+      "contents": "game.GetIPAddress()"
+    },
+    {
       "trigger": "game.GetMap",
       "contents": "game.GetMap()"
     },
@@ -1567,6 +1572,10 @@
     {
       "trigger": "game.IsDedicated",
       "contents": "game.IsDedicated()"
+    },
+    {
+      "trigger": "game.KickID",
+      "contents": "game.KickID(${1:string id},${2:string reason=\"No reason given\"})"
     },
     {
       "trigger": "game.LoadNextMap",
@@ -3670,7 +3679,7 @@
     },
     {
       "trigger": "string.rep",
-      "contents": "string.rep(${1:string str},${2:number repetitions})"
+      "contents": "string.rep(${1:string str},${2:number repetitions},${3:string separator=\"\"})"
     },
     {
       "trigger": "string.Replace",
@@ -4766,7 +4775,7 @@
     },
     {
       "trigger": "ConsoleAutoComplete",
-      "contents": "ConsoleAutoComplete()"
+      "contents": "ConsoleAutoComplete(${1:string text})"
     },
     {
       "trigger": "ConVarExists",
@@ -4783,6 +4792,10 @@
     {
       "trigger": "CreateMaterial",
       "contents": "CreateMaterial(${1:string name},${2:string shaderName},${3:table materialData})"
+    },
+    {
+      "trigger": "CreateParticleSystem",
+      "contents": "CreateParticleSystem(${1:Entity ent},${2:string effect},${3:number partAttachment},${4:number entAttachment=0},${5:Vector offset=Vector( 0, 0, 0 )})"
     },
     {
       "trigger": "CreateSound",
@@ -5365,10 +5378,6 @@
       "contents": "RandomPairs(${1:table table},${2:boolean descending})"
     },
     {
-      "trigger": "RawConsoleCommand",
-      "contents": "RawConsoleCommand(${1:string command})"
-    },
-    {
       "trigger": "rawequal",
       "contents": "rawequal(${1:any arg1})"
     },
@@ -5442,7 +5451,7 @@
     },
     {
       "trigger": "RunString",
-      "contents": "RunString(${1:string code})"
+      "contents": "RunString(${1:string code},${2:string identifier=\"RunString\"},${3:boolean handleError=true})"
     },
     {
       "trigger": "RunStringEx",
@@ -6401,6 +6410,10 @@
       "contents": "GetExposedSpots()"
     },
     {
+      "trigger": "GetExtentInfo",
+      "contents": "GetExtentInfo()"
+    },
+    {
       "trigger": "GetHidingSpots",
       "contents": "GetHidingSpots()"
     },
@@ -6439,6 +6452,10 @@
     {
       "trigger": "GetSizeY",
       "contents": "GetSizeY()"
+    },
+    {
+      "trigger": "GetTotalCost",
+      "contents": "GetTotalCost()"
     },
     {
       "trigger": "GetZ",
@@ -6507,6 +6524,10 @@
     {
       "trigger": "GetPosAtHeight",
       "contents": "GetPosAtHeight(${1:number height})"
+    },
+    {
+      "trigger": "GetTopRightArea",
+      "contents": "GetTopRightArea()"
     },
     {
       "trigger": "IsConnectedAtSide",
@@ -6627,6 +6648,22 @@
     {
       "trigger": "GetString",
       "contents": "GetString()"
+    },
+    {
+      "trigger": "SetBool",
+      "contents": "SetBool(${1:boolean value})"
+    },
+    {
+      "trigger": "SetFloat",
+      "contents": "SetFloat(${1:number value})"
+    },
+    {
+      "trigger": "SetInt",
+      "contents": "SetInt(${1:number value})"
+    },
+    {
+      "trigger": "SetString",
+      "contents": "SetString(${1:string value})"
     },
     {
       "trigger": "AddAllPlayers",
@@ -10014,7 +10051,7 @@
     },
     {
       "trigger": "IsChildHovered",
-      "contents": "IsChildHovered(${1:number depth})"
+      "contents": "IsChildHovered(${1:boolean immediate=false})"
     },
     {
       "trigger": "IsDraggable",
@@ -10349,6 +10386,10 @@
       "contents": "SetDragParent(${1:Panel parent})"
     },
     {
+      "trigger": "SetDrawLanguageID",
+      "contents": "SetDrawLanguageID(${1:boolean visible})"
+    },
+    {
       "trigger": "SetDrawLanguageIDAtLeft",
       "contents": "SetDrawLanguageIDAtLeft(${1:boolean left})"
     },
@@ -10651,6 +10692,10 @@
     {
       "trigger": "GetAge",
       "contents": "GetAge()"
+    },
+    {
+      "trigger": "GetAllSegments",
+      "contents": "GetAllSegments()"
     },
     {
       "trigger": "GetClosestPosition",
@@ -11053,6 +11098,10 @@
       "contents": "AnimRestartMainSequence()"
     },
     {
+      "trigger": "AnimSetGestureSequence",
+      "contents": "AnimSetGestureSequence(${1:number slot},${2:number sequenceID})"
+    },
+    {
       "trigger": "AnimSetGestureWeight",
       "contents": "AnimSetGestureWeight(${1:number slot},${2:number weight})"
     },
@@ -11194,7 +11243,7 @@
     },
     {
       "trigger": "GetAmmoCount",
-      "contents": "GetAmmoCount(${1:string ammotype})"
+      "contents": "GetAmmoCount(${1:any ammotype})"
     },
     {
       "trigger": "GetAvoidPlayers",
@@ -12283,6 +12332,10 @@
     {
       "trigger": "IsEngineStarted",
       "contents": "IsEngineStarted()"
+    },
+    {
+      "trigger": "IsValidVehicle",
+      "contents": "IsValidVehicle()"
     },
     {
       "trigger": "IsVehicle",
@@ -13406,11 +13459,15 @@
     },
     {
       "trigger": "OnClickLine",
-      "contents": "OnClickLine(${1:DListViewLine line},${2:boolean isSelected})"
+      "contents": "OnClickLine(${1:Panel line},${2:boolean isSelected})"
     },
     {
       "trigger": "OnRowSelected",
       "contents": "OnRowSelected(${1:number rowIndex},${2:Panel row})"
+    },
+    {
+      "trigger": "RemoveLine",
+      "contents": "RemoveLine(${1:Panel text})"
     },
     {
       "trigger": "SelectFirstItem",
@@ -13443,6 +13500,10 @@
     {
       "trigger": "AddSubMenu",
       "contents": "AddSubMenu(${1:string Name},${2:function func=nil})"
+    },
+    {
+      "trigger": "Open",
+      "contents": "Open(${1:number x=gui.MouseX()},${2:number y=gui.MouseY()},${3:any skipanimation},${4:Panel ownerpanel})"
     },
     {
       "trigger": "AddMenu",
@@ -13543,6 +13604,14 @@
     {
       "trigger": "LayoutEntity",
       "contents": "LayoutEntity(${1:Entity entity})"
+    },
+    {
+      "trigger": "PostDrawModel",
+      "contents": "PostDrawModel(${1:Entity ent})"
+    },
+    {
+      "trigger": "PreDrawModel",
+      "contents": "PreDrawModel(${1:Entity ent})"
     },
     {
       "trigger": "RunAnimation",
