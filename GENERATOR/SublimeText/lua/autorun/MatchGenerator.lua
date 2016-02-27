@@ -10,6 +10,7 @@
 Get the derma controls
 Returns: match String
 ---------------------------------------------------------------------------*/
+
 local function getDermaControls()
 	local controls = {}
 	for _, ctrl in pairs(derma.GetControlList()) do
@@ -284,6 +285,9 @@ local function GenerateSublimeStrings()
 					partTable[parts[i]] = partTable[parts[i]] or {}
 					partTable = partTable[parts[i]]
 				end
+				if num == #parts then
+					partTable[true] = true -- marker that states that this in itself is an enum
+				end
 			end
 		end
 
@@ -292,13 +296,19 @@ local function GenerateSublimeStrings()
 
 	-- Convert enumerations table to sublime Text recognized string
 	local function enumString(tbl)
-
 		local enums = ""
 		for k,v in pairs(tbl) do
-			if table.Count(v) > 1 then
-				enums = enums .. string.upper(k) .. "_(" .. enumString(v) .. ")|"
-			elseif table.Count(v) > 0 then
+			if k == true then continue end -- marker that states that this in itself is an enum
+			local count = table.Count(v)
+
+			if count > 2 and v[true] then -- Enum exists of itself and has multiple children
+				enums = enums .. string.upper(k) .. "(|_(" .. enumString(v) .. "))|"
+			elseif count == 2 and v[true] then -- Enum exists and has one child
 				enums = enums .. string.upper(k) .. "(|_" .. enumString(v) .. ")|"
+			elseif count > 1 and not v[true] then -- Enum doesn't exist, but has multiple children
+				enums = enums .. string.upper(k) .. "_(" .. enumString(v) .. ")|"
+			elseif count == 1 and not v[true] then -- Enum doesn't exist and has one child
+				enums = enums .. string.upper(k) .. "_" .. enumString(v) .. "|"
 			else
 				enums = enums .. string.upper(k) .. "|"
 			end
@@ -307,8 +317,7 @@ local function GenerateSublimeStrings()
 		return string.sub(enums, 1, -2)
 	end
 
-	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b("..enumString(groupedEnums())..")\\b|(?&lt;![.])\\.{3}(?!\\.)")
-
+	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b(" .. enumString(groupedEnums()) .. ")\\b|(?&lt;![.])\\.{3}(?!\\.)")
 
 	-- Libraries
 	local strLibraries = "\\b("
