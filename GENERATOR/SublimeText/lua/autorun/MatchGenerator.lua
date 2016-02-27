@@ -317,7 +317,10 @@ local function GenerateSublimeStrings()
 		return string.sub(enums, 1, -2)
 	end
 
-	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b(" .. enumString(groupedEnums()) .. ")\\b|(?&lt;![.])\\.{3}(?!\\.)")
+	-- TEXFILTER enums, because SOMEONE decided that those enums should be in table format
+	local texfilters = {"TEXFILTER\\.NONE", "TEXFILTER\\.POINT", "TEXFILTER\\.LINEAR", "TEXFILTER\\.ANISOTROPIC"}
+
+	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b(" .. table.concat(texfilters,"|") .. "|" .. enumString(groupedEnums()) .. ")\\b|(?&lt;![.])\\.{3}(?!\\.)")
 
 	-- Libraries
 	local strLibraries = "\\b("
