@@ -317,10 +317,40 @@ local function GenerateSublimeStrings()
 		return string.sub(enums, 1, -2)
 	end
 
-	-- TEXFILTER enums, because SOMEONE decided that those enums should be in table format
-	local texfilters = {"TEXFILTER\\.NONE", "TEXFILTER\\.POINT", "TEXFILTER\\.LINEAR", "TEXFILTER\\.ANISOTROPIC"}
+	-- enums made by cunts, because SOMEONE decided that those enums should be in table format
+	local cuntEnums =
+		{ "TEXFILTER\\.NONE"
+		, "TEXFILTER\\.POINT"
+		, "TEXFILTER\\.LINEAR"
+		, "TEXFILTER\\.ANISOTROPIC"
+		, "SENSORBONE\\.SHOULDER_RIGHT"
+		, "SENSORBONE\\.SHOULDER_LEFT"
+		, "SENSORBONE\\.HIP"
+		, "SENSORBONE\\.ELBOW_RIGHT"
+		, "SENSORBONE\\.KNEE_RIGHT"
+		, "SENSORBONE\\.WRIST_RIGHT"
+		, "SENSORBONE\\.ANKLE_LEFT"
+		, "SENSORBONE\\.FOOT_LEFT"
+		, "SENSORBONE\\.WRIST_LEFT"
+		, "SENSORBONE\\.FOOT_RIGHT"
+		, "SENSORBONE\\.HAND_RIGHT"
+		, "SENSORBONE\\.SHOULDER"
+		, "SENSORBONE\\.HIP_LEFT"
+		, "SENSORBONE\\.HIP_RIGHT"
+		, "SENSORBONE\\.HAND_LEFT"
+		, "SENSORBONE\\.ANKLE_RIGHT"
+		, "SENSORBONE\\.SPINE"
+		, "SENSORBONE\\.ELBOW_LEFT"
+		, "SENSORBONE\\.KNEE_LEFT"
+		, "SENSORBONE\\.HEAD"
+		, "SCREENFADE\\.IN"
+		, "SCREENFADE\\.OUT"
+		, "SCREENFADE\\.MODULATE"
+		, "SCREENFADE\\.STAYOUT"
+		, "SCREENFADE\\.PURGE"
+		}
 
-	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b(" .. table.concat(texfilters,"|") .. "|" .. enumString(groupedEnums()) .. ")\\b|(?&lt;![.])\\.{3}(?!\\.)")
+	file.Write("sublime_1enums.txt", "(?&lt;![^.]\\.|:)\\b(" .. table.concat(cuntEnums,"|") .. "|" .. enumString(groupedEnums()) .. ")\\b|(?&lt;![.])\\.{3}(?!\\.)")
 
 	-- Libraries
 	local strLibraries = "\\b("
