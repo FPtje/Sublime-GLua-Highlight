@@ -4,5 +4,5 @@ ${1:Title}
 ---------------------------------------------------------------------------*/]]></content>
 <tabTrigger>/*</tabTrigger>
 	<scope>source.lua</scope>
-	<description>FalcoComment</description>
+	<description>C Description Comment</description>
 </snippet>
