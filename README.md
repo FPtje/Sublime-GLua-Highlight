@@ -2,10 +2,11 @@
 
 ## Installing throught the package manager:
 1. Open Sublime
-2. Press Ctrl + Shift + P
-3. type install and press enter
-4. Type Gmod and press enter
-5. Restart sublime text
+1. Install [Package Control](https://packagecontrol.io/installation)
+1. Press Ctrl + Shift + P
+1. type install and press enter
+1. Type Gmod and press enter
+1. Restart sublime text
 
 When using sublime text 3 you will have to disable the default Lua plugin. Otherwise the default Lua plugin will remain as the default syntax highlight for all .lua files.
 This can be done by adding "Lua" to the ignored_packages setting. If you don't know how to do this, do this:
