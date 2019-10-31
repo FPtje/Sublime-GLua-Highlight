@@ -31,4 +31,4 @@ Open a lua file and go to view > Apply Syntax Highlighting > Gmod Lua. This file
 
 ## Credits
 
-Thanks to @JohnnyCrazy for his wiki scraper that provides the autocomplete entries!
+Thanks to @JohnnyCrazy and @djtb2924 for their wiki scrapers that provides the autocomplete entries!
