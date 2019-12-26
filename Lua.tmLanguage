@@ -281,6 +281,13 @@
 			<key>name</key>
 			<string>constant.language.lua</string>
 		</dict>
+		<!-- Labels -->
+		<dict>
+			<key>match</key>
+			<string>::([a-zA-Z_]\w*)::</string>
+			<key>name</key>
+			<string>entity.name.constant.lua</string>
+		</dict>
 		<!-- Enumerations -->
 		<dict>
 			<key>match</key>
