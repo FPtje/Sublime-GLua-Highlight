@@ -91,7 +91,7 @@ function arguments(args) {
 	return output.slice(0, -2) + ")"
 }
 
-enums.forEach((func) => {
+globals.forEach((func) => {
 	console.log(func.name, func.realms)
 	output.completions.push({
 		trigger: func.name,

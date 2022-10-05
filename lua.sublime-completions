@@ -426,1060 +426,3007 @@
       "details": "math.pi = π"
     },
     {
-      "trigger": "_USE",
-      "contents": "_USE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "_USE()"
-    },
-    {
-      "trigger": "ACT",
-      "contents": "ACT()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "ACT()"
-    },
-    {
-      "trigger": "AIMR",
-      "contents": "AIMR()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "AIMR()"
-    },
-    {
-      "trigger": "AMMO",
-      "contents": "AMMO()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "AMMO()"
-    },
-    {
-      "trigger": "ANALOG",
-      "contents": "ANALOG()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "ANALOG()"
-    },
-    {
-      "trigger": "BLEND",
-      "contents": "BLEND()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "BLEND()"
-    },
-    {
-      "trigger": "BLENDFUNC",
-      "contents": "BLENDFUNC()",
+      "trigger": "AccessorFunc",
+      "contents": "AccessorFunc(${1:table tab}, ${2:any key}, ${3:string name}, ${4:number force = nil})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "BLENDFUNC()"
+      "details": "AccessorFunc(tab, key, name, force)"
     },
     {
-      "trigger": "BLOOD_COLOR",
-      "contents": "BLOOD_COLOR()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "BLOOD_COLOR()"
-    },
-    {
-      "trigger": "BONE",
-      "contents": "BONE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "BONE()"
-    },
-    {
-      "trigger": "BOX",
-      "contents": "BOX()",
+      "trigger": "Add_NPC_Class",
+      "contents": "Add_NPC_Class(${1:string name})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "BOX()"
+      "details": "Add_NPC_Class(name)"
     },
     {
-      "trigger": "BUTTON_CODE",
-      "contents": "BUTTON_CODE()",
+      "trigger": "AddBackgroundImage",
+      "contents": "AddBackgroundImage(${1:string path})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "AddBackgroundImage(path)"
+    },
+    {
+      "trigger": "AddConsoleCommand",
+      "contents": "AddConsoleCommand(${1:string name}, ${2:string helpText}, ${3:number flags})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "BUTTON_CODE()"
+      "details": "AddConsoleCommand(name, helpText, flags)"
     },
     {
-      "trigger": "CAP",
-      "contents": "CAP()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "CAP()"
-    },
-    {
-      "trigger": "CHAN",
-      "contents": "CHAN()",
+      "trigger": "AddCSLuaFile",
+      "contents": "AddCSLuaFile(${1:string file = current file})",
       "annotation": "Shared",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "CHAN()"
+      "details": "AddCSLuaFile(file)"
     },
     {
-      "trigger": "CLASS",
-      "contents": "CLASS()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "CLASS()"
-    },
-    {
-      "trigger": "COLLISION_GROUP",
-      "contents": "COLLISION_GROUP()",
+      "trigger": "AddonMaterial",
+      "contents": "AddonMaterial(${1:string name})",
       "annotation": "Shared",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "COLLISION_GROUP()"
+      "details": "AddonMaterial(name)"
     },
     {
-      "trigger": "COND",
-      "contents": "COND()",
+      "trigger": "AddOriginToPVS",
+      "contents": "AddOriginToPVS(${1:Vector position})",
       "annotation": "Server",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "COND()"
+      "details": "AddOriginToPVS(position)"
     },
     {
-      "trigger": "CONTENTS",
-      "contents": "CONTENTS()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "CONTENTS()"
-    },
-    {
-      "trigger": "CREATERENDERTARGETFLAGS",
-      "contents": "CREATERENDERTARGETFLAGS()",
+      "trigger": "AddWorldTip",
+      "contents": "AddWorldTip(${1:number entindex = nil}, ${2:string text}, ${3:number dieTime = SysTime() + 0.05}, ${4:Vector pos = ent:GetPos()}, ${5:Entity ent = nil})",
       "annotation": "Client",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "CREATERENDERTARGETFLAGS()"
+      "details": "AddWorldTip(entindex, text, dieTime, pos, ent)"
     },
     {
-      "trigger": "CT",
-      "contents": "CT()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "CT()"
-    },
-    {
-      "trigger": "D",
-      "contents": "D()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "D()"
-    },
-    {
-      "trigger": "DISPSURF",
-      "contents": "DISPSURF()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "DISPSURF()"
-    },
-    {
-      "trigger": "DMG",
-      "contents": "DMG()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "DMG()"
-    },
-    {
-      "trigger": "DOCK",
-      "contents": "DOCK()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "DOCK()"
-    },
-    {
-      "trigger": "DOF",
-      "contents": "DOF()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "DOF()"
-    },
-    {
-      "trigger": "EF",
-      "contents": "EF()",
+      "trigger": "Angle",
+      "contents": "Angle(${1:number pitch = 0}, ${2:number yaw = 0}, ${3:number roll = 0})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "EF()"
+      "details": "Angle(pitch, yaw, roll)"
     },
     {
-      "trigger": "EFL",
-      "contents": "EFL()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "EFL()"
-    },
-    {
-      "trigger": "FCVAR",
-      "contents": "FCVAR()",
+      "trigger": "AngleRand",
+      "contents": "AngleRand(${1:number min = -90 for pitch, -180 for yaw and roll}, ${2:number max = 90 for pitch, 180 for yaw and roll})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "FCVAR()"
+      "details": "AngleRand(min, max)"
     },
     {
-      "trigger": "FFT",
-      "contents": "FFT()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "FFT()"
-    },
-    {
-      "trigger": "FL",
-      "contents": "FL()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "FL()"
-    },
-    {
-      "trigger": "FORCE",
-      "contents": "FORCE()",
+      "trigger": "assert",
+      "contents": "assert(${1:any expression}, ${2:string errorMessage = assertion failed!}, ${3:vararg returns = nil})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "FORCE()"
+      "details": "assert(expression, errorMessage, returns)"
     },
     {
-      "trigger": "FSASYNC",
-      "contents": "FSASYNC()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "FSASYNC()"
-    },
-    {
-      "trigger": "FSOLID",
-      "contents": "FSOLID()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "FSOLID()"
-    },
-    {
-      "trigger": "FVPHYSICS",
-      "contents": "FVPHYSICS()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "FVPHYSICS()"
-    },
-    {
-      "trigger": "GESTURE_SLOT",
-      "contents": "GESTURE_SLOT()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "GESTURE_SLOT()"
-    },
-    {
-      "trigger": "GLOBAL",
-      "contents": "GLOBAL()",
+      "trigger": "BroadcastLua",
+      "contents": "BroadcastLua(${1:string code})",
       "annotation": "Server",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "GLOBAL()"
+      "details": "BroadcastLua(code)"
     },
     {
-      "trigger": "GMOD_CHANNEL",
-      "contents": "GMOD_CHANNEL()",
+      "trigger": "BuildNetworkedVarsTable",
+      "contents": "BuildNetworkedVarsTable()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "BuildNetworkedVarsTable()"
+    },
+    {
+      "trigger": "CanAddServerToFavorites",
+      "contents": "CanAddServerToFavorites()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CanAddServerToFavorites()"
+    },
+    {
+      "trigger": "CancelLoading",
+      "contents": "CancelLoading()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CancelLoading()"
+    },
+    {
+      "trigger": "ChangeBackground",
+      "contents": "ChangeBackground(${1:string currentgm})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ChangeBackground(currentgm)"
+    },
+    {
+      "trigger": "ChangeTooltip",
+      "contents": "ChangeTooltip(${1:Panel panel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ChangeTooltip(panel)"
+    },
+    {
+      "trigger": "ClearBackgroundImages",
+      "contents": "ClearBackgroundImages()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ClearBackgroundImages()"
+    },
+    {
+      "trigger": "ClientsideModel",
+      "contents": "ClientsideModel(${1:string model}, ${2:number renderGroup = RENDERGROUP_OTHER})",
       "annotation": "Client",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "GMOD_CHANNEL()"
+      "details": "ClientsideModel(model, renderGroup)"
     },
     {
-      "trigger": "HITGROUP",
-      "contents": "HITGROUP()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "HITGROUP()"
-    },
-    {
-      "trigger": "HUD",
-      "contents": "HUD()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "HUD()"
-    },
-    {
-      "trigger": "HULL",
-      "contents": "HULL()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "HULL()"
-    },
-    {
-      "trigger": "IMAGE_FORMAT",
-      "contents": "IMAGE_FORMAT()",
+      "trigger": "ClientsideRagdoll",
+      "contents": "ClientsideRagdoll(${1:string model}, ${2:number renderGroup = RENDERGROUP_OPAQUE})",
       "annotation": "Client",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "IMAGE_FORMAT()"
+      "details": "ClientsideRagdoll(model, renderGroup)"
     },
     {
-      "trigger": "IN",
-      "contents": "IN()",
+      "trigger": "ClientsideScene",
+      "contents": "ClientsideScene(${1:string name}, ${2:Entity targetEnt})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ClientsideScene(name, targetEnt)"
+    },
+    {
+      "trigger": "CloseDermaMenus",
+      "contents": "CloseDermaMenus()",
       "annotation": "Shared",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "IN()"
+      "details": "CloseDermaMenus()"
     },
     {
-      "trigger": "JOYSTICK",
-      "contents": "JOYSTICK()",
+      "trigger": "collectgarbage",
+      "contents": "collectgarbage(${1:string action = collect}, ${2:number arg})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "JOYSTICK()"
+      "details": "collectgarbage(action, arg)"
     },
     {
-      "trigger": "KEY",
-      "contents": "KEY()",
+      "trigger": "Color",
+      "contents": "Color(${1:number r}, ${2:number g}, ${3:number b}, ${4:number a = 255})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "KEY()"
+      "details": "Color(r, g, b, a)"
     },
     {
-      "trigger": "kRenderFx",
-      "contents": "kRenderFx()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "kRenderFx()"
-    },
-    {
-      "trigger": "MASK",
-      "contents": "MASK()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MASK()"
-    },
-    {
-      "trigger": "MAT",
-      "contents": "MAT()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MAT()"
-    },
-    {
-      "trigger": "MATERIAL",
-      "contents": "MATERIAL()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MATERIAL()"
-    },
-    {
-      "trigger": "MATERIAL_CULLMODE",
-      "contents": "MATERIAL_CULLMODE()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MATERIAL_CULLMODE()"
-    },
-    {
-      "trigger": "MATERIAL_FOG",
-      "contents": "MATERIAL_FOG()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MATERIAL_FOG()"
-    },
-    {
-      "trigger": "MATERIAL_LIGHT",
-      "contents": "MATERIAL_LIGHT()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MATERIAL_LIGHT()"
-    },
-    {
-      "trigger": "MATERIAL_RT_DEPTH",
-      "contents": "MATERIAL_RT_DEPTH()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MATERIAL_RT_DEPTH()"
-    },
-    {
-      "trigger": "MOUSE",
-      "contents": "MOUSE()",
+      "trigger": "ColorAlpha",
+      "contents": "ColorAlpha(${1:table color}, ${2:number alpha})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "MOUSE()"
+      "details": "ColorAlpha(color, alpha)"
     },
     {
-      "trigger": "MOVECOLLIDE",
-      "contents": "MOVECOLLIDE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MOVECOLLIDE()"
-    },
-    {
-      "trigger": "MOVETYPE",
-      "contents": "MOVETYPE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "MOVETYPE()"
-    },
-    {
-      "trigger": "NAV",
-      "contents": "NAV()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NAV()"
-    },
-    {
-      "trigger": "NAV_MESH",
-      "contents": "NAV_MESH()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NAV_MESH()"
-    },
-    {
-      "trigger": "NavCorner",
-      "contents": "NavCorner()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NavCorner()"
-    },
-    {
-      "trigger": "NavDir",
-      "contents": "NavDir()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NavDir()"
-    },
-    {
-      "trigger": "NavTraverseType",
-      "contents": "NavTraverseType()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NavTraverseType()"
-    },
-    {
-      "trigger": "NOTIFY",
-      "contents": "NOTIFY()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NOTIFY()"
-    },
-    {
-      "trigger": "NPC_STATE",
-      "contents": "NPC_STATE()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NPC_STATE()"
-    },
-    {
-      "trigger": "NUM",
-      "contents": "NUM()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "NUM()"
-    },
-    {
-      "trigger": "OBS_MODE",
-      "contents": "OBS_MODE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "OBS_MODE()"
-    },
-    {
-      "trigger": "PATTACH",
-      "contents": "PATTACH()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "PATTACH()"
-    },
-    {
-      "trigger": "PLAYER",
-      "contents": "PLAYER()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "PLAYER()"
-    },
-    {
-      "trigger": "PLAYERANIMEVENT",
-      "contents": "PLAYERANIMEVENT()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "PLAYERANIMEVENT()"
-    },
-    {
-      "trigger": "RENDERGROUP",
-      "contents": "RENDERGROUP()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "RENDERGROUP()"
-    },
-    {
-      "trigger": "RENDERMODE",
-      "contents": "RENDERMODE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "RENDERMODE()"
-    },
-    {
-      "trigger": "RT_SIZE",
-      "contents": "RT_SIZE()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "RT_SIZE()"
-    },
-    {
-      "trigger": "SCHED",
-      "contents": "SCHED()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SCHED()"
-    },
-    {
-      "trigger": "SCREENFADE",
-      "contents": "SCREENFADE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SCREENFADE()"
-    },
-    {
-      "trigger": "SENSORBONE",
-      "contents": "SENSORBONE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SENSORBONE()"
-    },
-    {
-      "trigger": "SF",
-      "contents": "SF()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SF()"
-    },
-    {
-      "trigger": "SIGNONSTATE",
-      "contents": "SIGNONSTATE()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SIGNONSTATE()"
-    },
-    {
-      "trigger": "SIM",
-      "contents": "SIM()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SIM()"
-    },
-    {
-      "trigger": "SND",
-      "contents": "SND()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SND()"
-    },
-    {
-      "trigger": "SNDLVL",
-      "contents": "SNDLVL()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SNDLVL()"
-    },
-    {
-      "trigger": "SOLID",
-      "contents": "SOLID()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SOLID()"
-    },
-    {
-      "trigger": "SOUND",
-      "contents": "SOUND()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SOUND()"
-    },
-    {
-      "trigger": "STENCIL",
-      "contents": "STENCIL()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "STENCIL()"
-    },
-    {
-      "trigger": "STENCILCOMPARISONFUNCTION",
-      "contents": "STENCILCOMPARISONFUNCTION()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "STENCILCOMPARISONFUNCTION()"
-    },
-    {
-      "trigger": "STENCILOPERATION",
-      "contents": "STENCILOPERATION()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "STENCILOPERATION()"
-    },
-    {
-      "trigger": "STEPSOUNDTIME",
-      "contents": "STEPSOUNDTIME()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "STEPSOUNDTIME()"
-    },
-    {
-      "trigger": "STUDIO",
-      "contents": "STUDIO()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "STUDIO()"
-    },
-    {
-      "trigger": "SURF",
-      "contents": "SURF()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "SURF()"
-    },
-    {
-      "trigger": "TASKSTATUS",
-      "contents": "TASKSTATUS()",
-      "annotation": "Server",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TASKSTATUS()"
-    },
-    {
-      "trigger": "TEAM",
-      "contents": "TEAM()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TEAM()"
-    },
-    {
-      "trigger": "TEXFILTER",
-      "contents": "TEXFILTER()",
+      "trigger": "ColorRand",
+      "contents": "ColorRand(${1:boolean a = false})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "TEXFILTER()"
+      "details": "ColorRand(a)"
     },
     {
-      "trigger": "TEXT_ALIGN",
-      "contents": "TEXT_ALIGN()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TEXT_ALIGN()"
-    },
-    {
-      "trigger": "TEXT_FILTER",
-      "contents": "TEXT_FILTER()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TEXT_FILTER()"
-    },
-    {
-      "trigger": "TEXTUREFLAGS",
-      "contents": "TEXTUREFLAGS()",
-      "annotation": "Client",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TEXTUREFLAGS()"
-    },
-    {
-      "trigger": "TRACER",
-      "contents": "TRACER()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TRACER()"
-    },
-    {
-      "trigger": "TRANSMIT",
-      "contents": "TRANSMIT()",
-      "annotation": "Shared",
-      "kind": [
-        "function",
-        "f",
-        "Global"
-      ],
-      "details": "TRANSMIT()"
-    },
-    {
-      "trigger": "TYPE",
-      "contents": "TYPE()",
+      "trigger": "ColorToHSL",
+      "contents": "ColorToHSL(${1:table color})",
       "annotation": "SharedMenu",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "TYPE()"
+      "details": "ColorToHSL(color)"
     },
     {
-      "trigger": "USE",
-      "contents": "USE()",
+      "trigger": "ColorToHSV",
+      "contents": "ColorToHSV(${1:table color})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ColorToHSV(color)"
+    },
+    {
+      "trigger": "CompileFile",
+      "contents": "CompileFile(${1:string path})",
       "annotation": "Shared",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "USE()"
+      "details": "CompileFile(path)"
     },
     {
-      "trigger": "WEAPON_PROFICIENCY",
-      "contents": "WEAPON_PROFICIENCY()",
+      "trigger": "CompileString",
+      "contents": "CompileString(${1:string code}, ${2:string identifier}, ${3:boolean HandleError = true})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CompileString(code, identifier, HandleError)"
+    },
+    {
+      "trigger": "ConsoleAutoComplete",
+      "contents": "ConsoleAutoComplete(${1:string text})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ConsoleAutoComplete(text)"
+    },
+    {
+      "trigger": "ConVarExists",
+      "contents": "ConVarExists(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ConVarExists(name)"
+    },
+    {
+      "trigger": "CreateClientConVar",
+      "contents": "CreateClientConVar(${1:string name}, ${2:string default}, ${3:boolean shouldsave = true}, ${4:boolean userinfo = false}, ${5:string helptext}, ${6:number min = nil}, ${7:number max = nil})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreateClientConVar(name, default, shouldsave, userinfo, helptext, min, max)"
+    },
+    {
+      "trigger": "CreateConVar",
+      "contents": "CreateConVar(${1:string name}, ${2:string value}, ${3:number flags = FCVAR_NONE}, ${4:string helptext}, ${5:number min = nil}, ${6:number max = nil})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreateConVar(name, value, flags, helptext, min, max)"
+    },
+    {
+      "trigger": "CreateMaterial",
+      "contents": "CreateMaterial(${1:string name}, ${2:string shaderName}, ${3:table materialData})",
       "annotation": "Shared",
       "kind": [
         "function",
         "f",
         "Global"
       ],
-      "details": "WEAPON_PROFICIENCY()"
+      "details": "CreateMaterial(name, shaderName, materialData)"
+    },
+    {
+      "trigger": "CreateParticleSystem",
+      "contents": "CreateParticleSystem(${1:Entity ent}, ${2:string effect}, ${3:number partAttachment}, ${4:number entAttachment = 0}, ${5:Vector offset = Vector( 0, 0, 0 )})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreateParticleSystem(ent, effect, partAttachment, entAttachment, offset)"
+    },
+    {
+      "trigger": "CreatePhysCollideBox",
+      "contents": "CreatePhysCollideBox(${1:Vector mins}, ${2:Vector maxs})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreatePhysCollideBox(mins, maxs)"
+    },
+    {
+      "trigger": "CreatePhysCollidesFromModel",
+      "contents": "CreatePhysCollidesFromModel(${1:string modelName})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreatePhysCollidesFromModel(modelName)"
+    },
+    {
+      "trigger": "CreateSound",
+      "contents": "CreateSound(${1:Entity targetEnt}, ${2:string soundName}, ${3:CRecipientFilter filter = nil})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreateSound(targetEnt, soundName, filter)"
+    },
+    {
+      "trigger": "CreateSprite",
+      "contents": "CreateSprite(${1:IMaterial material})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CreateSprite(material)"
+    },
+    {
+      "trigger": "CurTime",
+      "contents": "CurTime()",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "CurTime()"
+    },
+    {
+      "trigger": "DamageInfo",
+      "contents": "DamageInfo()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DamageInfo()"
+    },
+    {
+      "trigger": "DebugInfo",
+      "contents": "DebugInfo(${1:number slot}, ${2:string info})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DebugInfo(slot, info)"
+    },
+    {
+      "trigger": "DEFINE_BASECLASS",
+      "contents": "DEFINE_BASECLASS(${1:string value})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DEFINE_BASECLASS(value)"
+    },
+    {
+      "trigger": "DeriveGamemode",
+      "contents": "DeriveGamemode(${1:string base})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DeriveGamemode(base)"
+    },
+    {
+      "trigger": "Derma_Anim",
+      "contents": "Derma_Anim(${1:string name}, ${2:Panel panel}, ${3:function func})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_Anim(name, panel, func)"
+    },
+    {
+      "trigger": "Derma_DrawBackgroundBlur",
+      "contents": "Derma_DrawBackgroundBlur(${1:Panel panel}, ${2:number startTime})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_DrawBackgroundBlur(panel, startTime)"
+    },
+    {
+      "trigger": "Derma_Hook",
+      "contents": "Derma_Hook(${1:Panel panel}, ${2:string functionName}, ${3:string hookName}, ${4:string typeName})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_Hook(panel, functionName, hookName, typeName)"
+    },
+    {
+      "trigger": "Derma_Install_Convar_Functions",
+      "contents": "Derma_Install_Convar_Functions(${1:Panel target})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_Install_Convar_Functions(target)"
+    },
+    {
+      "trigger": "Derma_Message",
+      "contents": "Derma_Message(${1:string Text}, ${2:string Title}, ${3:string Button})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_Message(Text, Title, Button)"
+    },
+    {
+      "trigger": "Derma_Query",
+      "contents": "Derma_Query(${1:string text = Message Text (Second Parameter)}, ${2:string title = Message Title (First Parameter)}, ${3:string btn1text}, ${4:function btn1func = nil}, ${5:string btn2text = nil}, ${6:function btn2func = nil}, ${7:string btn3text = nil}, ${8:function btn3func = nil}, ${9:string btn4text = nil}, ${10:function btn4func = nil})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_Query(text, title, btn1text, btn1func, btn2text, btn2func, btn3text, btn3func, btn4text, btn4func)"
+    },
+    {
+      "trigger": "Derma_StringRequest",
+      "contents": "Derma_StringRequest(${1:string title}, ${2:string subtitle}, ${3:string default}, ${4:function confirm}, ${5:function cancel = nil}, ${6:string confirmText = OK}, ${7:string cancelText = Cancel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Derma_StringRequest(title, subtitle, default, confirm, cancel, confirmText, cancelText)"
+    },
+    {
+      "trigger": "DermaMenu",
+      "contents": "DermaMenu(${1:boolean keepOpen = false}, ${2:Panel parent = nil})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DermaMenu(keepOpen, parent)"
+    },
+    {
+      "trigger": "DisableClipping",
+      "contents": "DisableClipping(${1:boolean disable})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DisableClipping(disable)"
+    },
+    {
+      "trigger": "DOF_Kill",
+      "contents": "DOF_Kill()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DOF_Kill()"
+    },
+    {
+      "trigger": "DOF_Start",
+      "contents": "DOF_Start()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DOF_Start()"
+    },
+    {
+      "trigger": "DOFModeHack",
+      "contents": "DOFModeHack(${1:boolean enable})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DOFModeHack(enable)"
+    },
+    {
+      "trigger": "DrawBackground",
+      "contents": "DrawBackground()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawBackground()"
+    },
+    {
+      "trigger": "DrawBloom",
+      "contents": "DrawBloom(${1:number Darken}, ${2:number Multiply}, ${3:number SizeX}, ${4:number SizeY}, ${5:number Passes}, ${6:number ColorMultiply}, ${7:number Red}, ${8:number Green}, ${9:number Blue})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawBloom(Darken, Multiply, SizeX, SizeY, Passes, ColorMultiply, Red, Green, Blue)"
+    },
+    {
+      "trigger": "DrawBokehDOF",
+      "contents": "DrawBokehDOF(${1:number intensity}, ${2:number distance}, ${3:number focus})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawBokehDOF(intensity, distance, focus)"
+    },
+    {
+      "trigger": "DrawColorModify",
+      "contents": "DrawColorModify(${1:table modifyParameters})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawColorModify(modifyParameters)"
+    },
+    {
+      "trigger": "DrawMaterialOverlay",
+      "contents": "DrawMaterialOverlay(${1:string Material}, ${2:number RefractAmount})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawMaterialOverlay(Material, RefractAmount)"
+    },
+    {
+      "trigger": "DrawMotionBlur",
+      "contents": "DrawMotionBlur(${1:number AddAlpha}, ${2:number DrawAlpha}, ${3:number Delay})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawMotionBlur(AddAlpha, DrawAlpha, Delay)"
+    },
+    {
+      "trigger": "DrawSharpen",
+      "contents": "DrawSharpen(${1:number Contrast}, ${2:number Distance})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawSharpen(Contrast, Distance)"
+    },
+    {
+      "trigger": "DrawSobel",
+      "contents": "DrawSobel(${1:number Threshold})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawSobel(Threshold)"
+    },
+    {
+      "trigger": "DrawSunbeams",
+      "contents": "DrawSunbeams(${1:number darken}, ${2:number multiplier}, ${3:number sunSize}, ${4:number sunX}, ${5:number sunY})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawSunbeams(darken, multiplier, sunSize, sunX, sunY)"
+    },
+    {
+      "trigger": "DrawTexturize",
+      "contents": "DrawTexturize(${1:number Scale}, ${2:number BaseTexture})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawTexturize(Scale, BaseTexture)"
+    },
+    {
+      "trigger": "DrawToyTown",
+      "contents": "DrawToyTown(${1:number Passes}, ${2:number Height})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DrawToyTown(Passes, Height)"
+    },
+    {
+      "trigger": "DropEntityIfHeld",
+      "contents": "DropEntityIfHeld(${1:Entity ent})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DropEntityIfHeld(ent)"
+    },
+    {
+      "trigger": "DynamicLight",
+      "contents": "DynamicLight(${1:number index}, ${2:boolean elight = false})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "DynamicLight(index, elight)"
+    },
+    {
+      "trigger": "EffectData",
+      "contents": "EffectData()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EffectData()"
+    },
+    {
+      "trigger": "Either",
+      "contents": "Either(${1:any condition}, ${2:any truevar}, ${3:any falsevar})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Either(condition, truevar, falsevar)"
+    },
+    {
+      "trigger": "EmitSentence",
+      "contents": "EmitSentence(${1:string soundName}, ${2:Vector position}, ${3:number entity}, ${4:number channel = CHAN_AUTO}, ${5:number volume = 1}, ${6:number soundLevel = 75}, ${7:number soundFlags = 0}, ${8:number pitch = 100})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EmitSentence(soundName, position, entity, channel, volume, soundLevel, soundFlags, pitch)"
+    },
+    {
+      "trigger": "EmitSound",
+      "contents": "EmitSound(${1:string soundName}, ${2:Vector position}, ${3:number entity}, ${4:number channel = CHAN_AUTO}, ${5:number volume = 1}, ${6:number soundLevel = 75}, ${7:number soundFlags = 0}, ${8:number pitch = 100}, ${9:number dsp = 0})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EmitSound(soundName, position, entity, channel, volume, soundLevel, soundFlags, pitch, dsp)"
+    },
+    {
+      "trigger": "EndTooltip",
+      "contents": "EndTooltip(${1:Panel panel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EndTooltip(panel)"
+    },
+    {
+      "trigger": "Entity",
+      "contents": "Entity(${1:number entityIndex})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Entity(entityIndex)"
+    },
+    {
+      "trigger": "error",
+      "contents": "error(${1:string message}, ${2:number errorLevel = 1})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "error(message, errorLevel)"
+    },
+    {
+      "trigger": "Error",
+      "contents": "Error(${1:vararg arguments})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Error(arguments)"
+    },
+    {
+      "trigger": "ErrorNoHalt",
+      "contents": "ErrorNoHalt(${1:vararg arguments})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ErrorNoHalt(arguments)"
+    },
+    {
+      "trigger": "ErrorNoHaltWithStack",
+      "contents": "ErrorNoHaltWithStack(${1:vararg arguments})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ErrorNoHaltWithStack(arguments)"
+    },
+    {
+      "trigger": "EyeAngles",
+      "contents": "EyeAngles()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EyeAngles()"
+    },
+    {
+      "trigger": "EyePos",
+      "contents": "EyePos()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EyePos()"
+    },
+    {
+      "trigger": "EyeVector",
+      "contents": "EyeVector()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "EyeVector()"
+    },
+    {
+      "trigger": "FindMetaTable",
+      "contents": "FindMetaTable(${1:string metaName})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "FindMetaTable(metaName)"
+    },
+    {
+      "trigger": "FindTooltip",
+      "contents": "FindTooltip(${1:Panel panel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "FindTooltip(panel)"
+    },
+    {
+      "trigger": "Format",
+      "contents": "Format(${1:string format}, ${2:vararg formatParameters})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Format(format, formatParameters)"
+    },
+    {
+      "trigger": "FrameNumber",
+      "contents": "FrameNumber()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "FrameNumber()"
+    },
+    {
+      "trigger": "FrameTime",
+      "contents": "FrameTime()",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "FrameTime()"
+    },
+    {
+      "trigger": "GameDetails",
+      "contents": "GameDetails(${1:string servername}, ${2:string serverurl}, ${3:string mapname}, ${4:number maxplayers}, ${5:string steamid}, ${6:string gamemode})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GameDetails(servername, serverurl, mapname, maxplayers, steamid, gamemode)"
+    },
+    {
+      "trigger": "gcinfo",
+      "contents": "gcinfo()",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "gcinfo()"
+    },
+    {
+      "trigger": "GetAPIManifest",
+      "contents": "GetAPIManifest(${1:function callback})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetAPIManifest(callback)"
+    },
+    {
+      "trigger": "GetConVar",
+      "contents": "GetConVar(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetConVar(name)"
+    },
+    {
+      "trigger": "GetConVar_Internal",
+      "contents": "GetConVar_Internal(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetConVar_Internal(name)"
+    },
+    {
+      "trigger": "GetConVarNumber",
+      "contents": "GetConVarNumber(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetConVarNumber(name)"
+    },
+    {
+      "trigger": "GetConVarString",
+      "contents": "GetConVarString(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetConVarString(name)"
+    },
+    {
+      "trigger": "GetDefaultLoadingHTML",
+      "contents": "GetDefaultLoadingHTML()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetDefaultLoadingHTML()"
+    },
+    {
+      "trigger": "GetDemoFileDetails",
+      "contents": "GetDemoFileDetails(${1:string filename})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetDemoFileDetails(filename)"
+    },
+    {
+      "trigger": "GetDownloadables",
+      "contents": "GetDownloadables()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetDownloadables()"
+    },
+    {
+      "trigger": "getfenv",
+      "contents": "getfenv(${1:function location = 1})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "getfenv(location)"
+    },
+    {
+      "trigger": "GetGlobalAngle",
+      "contents": "GetGlobalAngle(${1:string index}, ${2:Angle default = Angle( 0, 0, 0 )})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalAngle(index, default)"
+    },
+    {
+      "trigger": "GetGlobalBool",
+      "contents": "GetGlobalBool(${1:string index}, ${2:boolean default = false})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalBool(index, default)"
+    },
+    {
+      "trigger": "GetGlobalEntity",
+      "contents": "GetGlobalEntity(${1:string index}, ${2:Entity default = NULL})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalEntity(index, default)"
+    },
+    {
+      "trigger": "GetGlobalFloat",
+      "contents": "GetGlobalFloat(${1:string index}, ${2:number default = 0})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalFloat(index, default)"
+    },
+    {
+      "trigger": "GetGlobalInt",
+      "contents": "GetGlobalInt(${1:string index}, ${2:number default = 0})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalInt(index, default)"
+    },
+    {
+      "trigger": "GetGlobalString",
+      "contents": "GetGlobalString(${1:string index}, ${2:string default})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalString(index, default)"
+    },
+    {
+      "trigger": "GetGlobalVector",
+      "contents": "GetGlobalVector(${1:string Index}, ${2:Vector Default})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetGlobalVector(Index, Default)"
+    },
+    {
+      "trigger": "GetHostName",
+      "contents": "GetHostName()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetHostName()"
+    },
+    {
+      "trigger": "GetHUDPanel",
+      "contents": "GetHUDPanel()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetHUDPanel()"
+    },
+    {
+      "trigger": "GetLoadPanel",
+      "contents": "GetLoadPanel()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetLoadPanel()"
+    },
+    {
+      "trigger": "GetLoadStatus",
+      "contents": "GetLoadStatus()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetLoadStatus()"
+    },
+    {
+      "trigger": "GetMapList",
+      "contents": "GetMapList()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetMapList()"
+    },
+    {
+      "trigger": "getmetatable",
+      "contents": "getmetatable(${1:any object})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "getmetatable(object)"
+    },
+    {
+      "trigger": "GetOverlayPanel",
+      "contents": "GetOverlayPanel()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetOverlayPanel()"
+    },
+    {
+      "trigger": "GetPredictionPlayer",
+      "contents": "GetPredictionPlayer()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetPredictionPlayer()"
+    },
+    {
+      "trigger": "GetRenderTarget",
+      "contents": "GetRenderTarget(${1:string name}, ${2:number width}, ${3:number height})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetRenderTarget(name, width, height)"
+    },
+    {
+      "trigger": "GetRenderTargetEx",
+      "contents": "GetRenderTargetEx(${1:string name}, ${2:number width}, ${3:number height}, ${4:number sizeMode}, ${5:number depthMode}, ${6:number textureFlags}, ${7:number rtFlags}, ${8:number imageFormat})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetRenderTargetEx(name, width, height, sizeMode, depthMode, textureFlags, rtFlags, imageFormat)"
+    },
+    {
+      "trigger": "GetSaveFileDetails",
+      "contents": "GetSaveFileDetails(${1:string filename})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetSaveFileDetails(filename)"
+    },
+    {
+      "trigger": "GetTimeoutInfo",
+      "contents": "GetTimeoutInfo()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetTimeoutInfo()"
+    },
+    {
+      "trigger": "GetViewEntity",
+      "contents": "GetViewEntity()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "GetViewEntity()"
+    },
+    {
+      "trigger": "HSLToColor",
+      "contents": "HSLToColor(${1:number hue}, ${2:number saturation}, ${3:number value})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "HSLToColor(hue, saturation, value)"
+    },
+    {
+      "trigger": "HSVToColor",
+      "contents": "HSVToColor(${1:number hue}, ${2:number saturation}, ${3:number value})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "HSVToColor(hue, saturation, value)"
+    },
+    {
+      "trigger": "HTTP",
+      "contents": "HTTP(${1:table parameters})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "HTTP(parameters)"
+    },
+    {
+      "trigger": "include",
+      "contents": "include(${1:string fileName})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "include(fileName)"
+    },
+    {
+      "trigger": "IncludeCS",
+      "contents": "IncludeCS(${1:string filename})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IncludeCS(filename)"
+    },
+    {
+      "trigger": "ipairs",
+      "contents": "ipairs(${1:table tab})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ipairs(tab)"
+    },
+    {
+      "trigger": "isangle",
+      "contents": "isangle(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "isangle(variable)"
+    },
+    {
+      "trigger": "isbool",
+      "contents": "isbool(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "isbool(variable)"
+    },
+    {
+      "trigger": "IsColor",
+      "contents": "IsColor(${1:any Object})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsColor(Object)"
+    },
+    {
+      "trigger": "IsConCommandBlocked",
+      "contents": "IsConCommandBlocked(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsConCommandBlocked(name)"
+    },
+    {
+      "trigger": "IsEnemyEntityName",
+      "contents": "IsEnemyEntityName(${1:string className})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsEnemyEntityName(className)"
+    },
+    {
+      "trigger": "IsEntity",
+      "contents": "IsEntity(${1:any variable})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsEntity(variable)"
+    },
+    {
+      "trigger": "IsFirstTimePredicted",
+      "contents": "IsFirstTimePredicted()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsFirstTimePredicted()"
+    },
+    {
+      "trigger": "IsFriendEntityName",
+      "contents": "IsFriendEntityName(${1:string className})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsFriendEntityName(className)"
+    },
+    {
+      "trigger": "isfunction",
+      "contents": "isfunction(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "isfunction(variable)"
+    },
+    {
+      "trigger": "IsInGame",
+      "contents": "IsInGame()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsInGame()"
+    },
+    {
+      "trigger": "ismatrix",
+      "contents": "ismatrix(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ismatrix(variable)"
+    },
+    {
+      "trigger": "IsMounted",
+      "contents": "IsMounted(${1:string game})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsMounted(game)"
+    },
+    {
+      "trigger": "isnumber",
+      "contents": "isnumber(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "isnumber(variable)"
+    },
+    {
+      "trigger": "ispanel",
+      "contents": "ispanel(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ispanel(variable)"
+    },
+    {
+      "trigger": "isstring",
+      "contents": "isstring(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "isstring(variable)"
+    },
+    {
+      "trigger": "istable",
+      "contents": "istable(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "istable(variable)"
+    },
+    {
+      "trigger": "IsTableOfEntitiesValid",
+      "contents": "IsTableOfEntitiesValid(${1:table table})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsTableOfEntitiesValid(table)"
+    },
+    {
+      "trigger": "IsUselessModel",
+      "contents": "IsUselessModel(${1:string modelName})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsUselessModel(modelName)"
+    },
+    {
+      "trigger": "IsValid",
+      "contents": "IsValid(${1:any toBeValidated})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "IsValid(toBeValidated)"
+    },
+    {
+      "trigger": "isvector",
+      "contents": "isvector(${1:any variable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "isvector(variable)"
+    },
+    {
+      "trigger": "JoinServer",
+      "contents": "JoinServer(${1:string IP})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "JoinServer(IP)"
+    },
+    {
+      "trigger": "JS_Language",
+      "contents": "JS_Language(${1:Panel htmlPanel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "JS_Language(htmlPanel)"
+    },
+    {
+      "trigger": "JS_Utility",
+      "contents": "JS_Utility(${1:Panel htmlPanel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "JS_Utility(htmlPanel)"
+    },
+    {
+      "trigger": "JS_Workshop",
+      "contents": "JS_Workshop(${1:Panel htmlPanel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "JS_Workshop(htmlPanel)"
+    },
+    {
+      "trigger": "Label",
+      "contents": "Label(${1:string text}, ${2:Panel parent = nil})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Label(text, parent)"
+    },
+    {
+      "trigger": "LanguageChanged",
+      "contents": "LanguageChanged(${1:string lang})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LanguageChanged(lang)"
+    },
+    {
+      "trigger": "Lerp",
+      "contents": "Lerp(${1:number t}, ${2:number from}, ${3:number to})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Lerp(t, from, to)"
+    },
+    {
+      "trigger": "LerpAngle",
+      "contents": "LerpAngle(${1:number ratio}, ${2:Angle angleStart}, ${3:Angle angleEnd})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LerpAngle(ratio, angleStart, angleEnd)"
+    },
+    {
+      "trigger": "LerpVector",
+      "contents": "LerpVector(${1:number fraction}, ${2:Vector from}, ${3:Vector to})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LerpVector(fraction, from, to)"
+    },
+    {
+      "trigger": "LoadAddonPresets",
+      "contents": "LoadAddonPresets()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LoadAddonPresets()"
+    },
+    {
+      "trigger": "LoadLastMap",
+      "contents": "LoadLastMap()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LoadLastMap()"
+    },
+    {
+      "trigger": "LoadPresets",
+      "contents": "LoadPresets()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LoadPresets()"
+    },
+    {
+      "trigger": "Localize",
+      "contents": "Localize(${1:string localisationToken}, ${2:string default})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Localize(localisationToken, default)"
+    },
+    {
+      "trigger": "LocalPlayer",
+      "contents": "LocalPlayer()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LocalPlayer()"
+    },
+    {
+      "trigger": "LocalToWorld",
+      "contents": "LocalToWorld(${1:Vector localPos}, ${2:Angle localAng}, ${3:Vector originPos}, ${4:Angle originAngle})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "LocalToWorld(localPos, localAng, originPos, originAngle)"
+    },
+    {
+      "trigger": "Material",
+      "contents": "Material(${1:string materialName}, ${2:string pngParameters = nil})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Material(materialName, pngParameters)"
+    },
+    {
+      "trigger": "Matrix",
+      "contents": "Matrix(${1:table data = {{1, 0, 0, 0}, {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}}})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Matrix(data)"
+    },
+    {
+      "trigger": "Mesh",
+      "contents": "Mesh(${1:IMaterial mat = nil})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Mesh(mat)"
+    },
+    {
+      "trigger": "Model",
+      "contents": "Model(${1:string model})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Model(model)"
+    },
+    {
+      "trigger": "module",
+      "contents": "module(${1:string name}, ${2:vararg loaders})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "module(name, loaders)"
+    },
+    {
+      "trigger": "Msg",
+      "contents": "Msg(${1:vararg args})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Msg(args)"
+    },
+    {
+      "trigger": "MsgAll",
+      "contents": "MsgAll(${1:vararg args})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "MsgAll(args)"
+    },
+    {
+      "trigger": "MsgC",
+      "contents": "MsgC(${1:vararg args})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "MsgC(args)"
+    },
+    {
+      "trigger": "MsgN",
+      "contents": "MsgN(${1:vararg args})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "MsgN(args)"
+    },
+    {
+      "trigger": "NamedColor",
+      "contents": "NamedColor(${1:string name})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "NamedColor(name)"
+    },
+    {
+      "trigger": "newproxy",
+      "contents": "newproxy(${1:boolean addMetatable = false})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "newproxy(addMetatable)"
+    },
+    {
+      "trigger": "next",
+      "contents": "next(${1:table tab}, ${2:any prevKey = nil})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "next(tab, prevKey)"
+    },
+    {
+      "trigger": "NumDownloadables",
+      "contents": "NumDownloadables()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "NumDownloadables()"
+    },
+    {
+      "trigger": "NumModelSkins",
+      "contents": "NumModelSkins(${1:string modelName})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "NumModelSkins(modelName)"
+    },
+    {
+      "trigger": "OnModelLoaded",
+      "contents": "OnModelLoaded(${1:string modelName}, ${2:number numPostParams}, ${3:number numSeq}, ${4:number numAttachments}, ${5:number numBoneControllers}, ${6:number numSkins}, ${7:number size})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "OnModelLoaded(modelName, numPostParams, numSeq, numAttachments, numBoneControllers, numSkins, size)"
+    },
+    {
+      "trigger": "OpenFolder",
+      "contents": "OpenFolder(${1:string folder})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "OpenFolder(folder)"
+    },
+    {
+      "trigger": "OrderVectors",
+      "contents": "OrderVectors(${1:Vector vector1}, ${2:Vector vector2})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "OrderVectors(vector1, vector2)"
+    },
+    {
+      "trigger": "pairs",
+      "contents": "pairs(${1:table tab})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "pairs(tab)"
+    },
+    {
+      "trigger": "Particle",
+      "contents": "Particle(${1:string file})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Particle(file)"
+    },
+    {
+      "trigger": "ParticleEffect",
+      "contents": "ParticleEffect(${1:string particleName}, ${2:Vector position}, ${3:Angle angles}, ${4:Entity parent = NULL})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ParticleEffect(particleName, position, angles, parent)"
+    },
+    {
+      "trigger": "ParticleEffectAttach",
+      "contents": "ParticleEffectAttach(${1:string particleName}, ${2:number attachType}, ${3:Entity entity}, ${4:number attachmentID})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ParticleEffectAttach(particleName, attachType, entity, attachmentID)"
+    },
+    {
+      "trigger": "ParticleEmitter",
+      "contents": "ParticleEmitter(${1:Vector position}, ${2:boolean use3D})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ParticleEmitter(position, use3D)"
+    },
+    {
+      "trigger": "Path",
+      "contents": "Path(${1:string type})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Path(type)"
+    },
+    {
+      "trigger": "pcall",
+      "contents": "pcall(${1:function func}, ${2:vararg arguments})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "pcall(func, arguments)"
+    },
+    {
+      "trigger": "Player",
+      "contents": "Player(${1:number playerIndex})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Player(playerIndex)"
+    },
+    {
+      "trigger": "PositionSpawnIcon",
+      "contents": "PositionSpawnIcon(${1:Entity model}, ${2:Vector position}, ${3:boolean noAngles})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PositionSpawnIcon(model, position, noAngles)"
+    },
+    {
+      "trigger": "PrecacheParticleSystem",
+      "contents": "PrecacheParticleSystem(${1:string particleSystemName})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PrecacheParticleSystem(particleSystemName)"
+    },
+    {
+      "trigger": "PrecacheScene",
+      "contents": "PrecacheScene(${1:string scene})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PrecacheScene(scene)"
+    },
+    {
+      "trigger": "PrecacheSentenceFile",
+      "contents": "PrecacheSentenceFile(${1:string filename})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PrecacheSentenceFile(filename)"
+    },
+    {
+      "trigger": "PrecacheSentenceGroup",
+      "contents": "PrecacheSentenceGroup(${1:string group})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PrecacheSentenceGroup(group)"
+    },
+    {
+      "trigger": "print",
+      "contents": "print(${1:vararg args})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "print(args)"
+    },
+    {
+      "trigger": "PrintMessage",
+      "contents": "PrintMessage(${1:number type}, ${2:string message})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PrintMessage(type, message)"
+    },
+    {
+      "trigger": "PrintTable",
+      "contents": "PrintTable(${1:table tableToPrint}, ${2:number indent = 0}, ${3:table done = {}})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "PrintTable(tableToPrint, indent, done)"
+    },
+    {
+      "trigger": "ProjectedTexture",
+      "contents": "ProjectedTexture()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ProjectedTexture()"
+    },
+    {
+      "trigger": "ProtectedCall",
+      "contents": "ProtectedCall(${1:function func})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ProtectedCall(func)"
+    },
+    {
+      "trigger": "RandomPairs",
+      "contents": "RandomPairs(${1:table table}, ${2:boolean descending})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RandomPairs(table, descending)"
+    },
+    {
+      "trigger": "rawequal",
+      "contents": "rawequal(${1:any value1}, ${2:any value2})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "rawequal(value1, value2)"
+    },
+    {
+      "trigger": "rawget",
+      "contents": "rawget(${1:table table}, ${2:any index})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "rawget(table, index)"
+    },
+    {
+      "trigger": "rawset",
+      "contents": "rawset(${1:table table}, ${2:any index}, ${3:any value})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "rawset(table, index, value)"
+    },
+    {
+      "trigger": "RealFrameTime",
+      "contents": "RealFrameTime()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RealFrameTime()"
+    },
+    {
+      "trigger": "RealTime",
+      "contents": "RealTime()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RealTime()"
+    },
+    {
+      "trigger": "RecipientFilter",
+      "contents": "RecipientFilter(${1:boolean unreliable = false})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RecipientFilter(unreliable)"
+    },
+    {
+      "trigger": "RecordDemoFrame",
+      "contents": "RecordDemoFrame()",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RecordDemoFrame()"
+    },
+    {
+      "trigger": "RegisterDermaMenuForClose",
+      "contents": "RegisterDermaMenuForClose(${1:Panel menu})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RegisterDermaMenuForClose(menu)"
+    },
+    {
+      "trigger": "RememberCursorPosition",
+      "contents": "RememberCursorPosition()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RememberCursorPosition()"
+    },
+    {
+      "trigger": "RemoveTooltip",
+      "contents": "RemoveTooltip()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RemoveTooltip()"
+    },
+    {
+      "trigger": "RenderAngles",
+      "contents": "RenderAngles()",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RenderAngles()"
+    },
+    {
+      "trigger": "RenderDoF",
+      "contents": "RenderDoF(${1:Vector origin}, ${2:Angle angle}, ${3:Vector usableFocusPoint}, ${4:number angleSize}, ${5:number radialSteps}, ${6:number passes}, ${7:boolean spin}, ${8:table inView}, ${9:number fov})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RenderDoF(origin, angle, usableFocusPoint, angleSize, radialSteps, passes, spin, inView, fov)"
+    },
+    {
+      "trigger": "RenderStereoscopy",
+      "contents": "RenderStereoscopy(${1:Vector viewOrigin}, ${2:Angle viewAngles})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RenderStereoscopy(viewOrigin, viewAngles)"
+    },
+    {
+      "trigger": "RenderSuperDoF",
+      "contents": "RenderSuperDoF(${1:Vector viewOrigin}, ${2:Angle viewAngles}, ${3:number viewFOV})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RenderSuperDoF(viewOrigin, viewAngles, viewFOV)"
+    },
+    {
+      "trigger": "require",
+      "contents": "require(${1:string name})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "require(name)"
+    },
+    {
+      "trigger": "RestoreCursorPosition",
+      "contents": "RestoreCursorPosition()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RestoreCursorPosition()"
+    },
+    {
+      "trigger": "RunConsoleCommand",
+      "contents": "RunConsoleCommand(${1:string command}, ${2:vararg arguments})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RunConsoleCommand(command, arguments)"
+    },
+    {
+      "trigger": "RunGameUICommand",
+      "contents": "RunGameUICommand(${1:string command})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RunGameUICommand(command)"
+    },
+    {
+      "trigger": "RunString",
+      "contents": "RunString(${1:string code}, ${2:string identifier = RunString}, ${3:boolean handleError = true})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RunString(code, identifier, handleError)"
+    },
+    {
+      "trigger": "RunStringEx",
+      "contents": "RunStringEx()",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "RunStringEx()"
+    },
+    {
+      "trigger": "SafeRemoveEntity",
+      "contents": "SafeRemoveEntity(${1:Entity ent})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SafeRemoveEntity(ent)"
+    },
+    {
+      "trigger": "SafeRemoveEntityDelayed",
+      "contents": "SafeRemoveEntityDelayed(${1:Entity entity}, ${2:number delay})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SafeRemoveEntityDelayed(entity, delay)"
+    },
+    {
+      "trigger": "SaveAddonPresets",
+      "contents": "SaveAddonPresets(${1:string JSON})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SaveAddonPresets(JSON)"
+    },
+    {
+      "trigger": "SaveLastMap",
+      "contents": "SaveLastMap(${1:string map}, ${2:string category})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SaveLastMap(map, category)"
+    },
+    {
+      "trigger": "SavePresets",
+      "contents": "SavePresets(${1:table presets})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SavePresets(presets)"
+    },
+    {
+      "trigger": "ScreenScale",
+      "contents": "ScreenScale(${1:number Size})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ScreenScale(Size)"
+    },
+    {
+      "trigger": "ScrH",
+      "contents": "ScrH()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ScrH()"
+    },
+    {
+      "trigger": "ScrW",
+      "contents": "ScrW()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ScrW()"
+    },
+    {
+      "trigger": "select",
+      "contents": "select(${1:any parameter}, ${2:vararg vararg})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "select(parameter, vararg)"
+    },
+    {
+      "trigger": "SendUserMessage",
+      "contents": "SendUserMessage(${1:string name}, ${2:any recipients}, ${3:vararg args})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SendUserMessage(name, recipients, args)"
+    },
+    {
+      "trigger": "SentenceDuration",
+      "contents": "SentenceDuration(${1:string name})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SentenceDuration(name)"
+    },
+    {
+      "trigger": "ServerLog",
+      "contents": "ServerLog(${1:string parameter})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ServerLog(parameter)"
+    },
+    {
+      "trigger": "SetClipboardText",
+      "contents": "SetClipboardText(${1:string text})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetClipboardText(text)"
+    },
+    {
+      "trigger": "setfenv",
+      "contents": "setfenv(${1:function location}, ${2:table enviroment})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "setfenv(location, enviroment)"
+    },
+    {
+      "trigger": "SetGlobalAngle",
+      "contents": "SetGlobalAngle(${1:any index}, ${2:Angle angle})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalAngle(index, angle)"
+    },
+    {
+      "trigger": "SetGlobalBool",
+      "contents": "SetGlobalBool(${1:any index}, ${2:boolean bool})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalBool(index, bool)"
+    },
+    {
+      "trigger": "SetGlobalEntity",
+      "contents": "SetGlobalEntity(${1:any index}, ${2:Entity ent})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalEntity(index, ent)"
+    },
+    {
+      "trigger": "SetGlobalFloat",
+      "contents": "SetGlobalFloat(${1:any index}, ${2:number float})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalFloat(index, float)"
+    },
+    {
+      "trigger": "SetGlobalInt",
+      "contents": "SetGlobalInt(${1:string index}, ${2:number value})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalInt(index, value)"
+    },
+    {
+      "trigger": "SetGlobalString",
+      "contents": "SetGlobalString(${1:any index}, ${2:string string})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalString(index, string)"
+    },
+    {
+      "trigger": "SetGlobalVector",
+      "contents": "SetGlobalVector(${1:any index}, ${2:Vector vec})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetGlobalVector(index, vec)"
+    },
+    {
+      "trigger": "setmetatable",
+      "contents": "setmetatable(${1:table Tab}, ${2:table Metatable})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "setmetatable(Tab, Metatable)"
+    },
+    {
+      "trigger": "SetPhysConstraintSystem",
+      "contents": "SetPhysConstraintSystem(${1:Entity constraintSystem})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SetPhysConstraintSystem(constraintSystem)"
+    },
+    {
+      "trigger": "SortedPairs",
+      "contents": "SortedPairs(${1:table table}, ${2:boolean desc = false})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SortedPairs(table, desc)"
+    },
+    {
+      "trigger": "SortedPairsByMemberValue",
+      "contents": "SortedPairsByMemberValue(${1:table table}, ${2:any memberKey}, ${3:boolean descending = false})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SortedPairsByMemberValue(table, memberKey, descending)"
+    },
+    {
+      "trigger": "SortedPairsByValue",
+      "contents": "SortedPairsByValue(${1:table table}, ${2:boolean descending = false})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SortedPairsByValue(table, descending)"
+    },
+    {
+      "trigger": "Sound",
+      "contents": "Sound(${1:string soundPath})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Sound(soundPath)"
+    },
+    {
+      "trigger": "SoundDuration",
+      "contents": "SoundDuration(${1:string soundName})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SoundDuration(soundName)"
+    },
+    {
+      "trigger": "SQLStr",
+      "contents": "SQLStr(${1:string input}, ${2:boolean noQuotes = false})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SQLStr(input, noQuotes)"
+    },
+    {
+      "trigger": "SScale",
+      "contents": "SScale(${1:number Size})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SScale(Size)"
+    },
+    {
+      "trigger": "STNDRD",
+      "contents": "STNDRD(${1:number number})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "STNDRD(number)"
+    },
+    {
+      "trigger": "SuppressHostEvents",
+      "contents": "SuppressHostEvents(${1:Player suppressPlayer})",
+      "annotation": "Server",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SuppressHostEvents(suppressPlayer)"
+    },
+    {
+      "trigger": "SysTime",
+      "contents": "SysTime()",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "SysTime()"
+    },
+    {
+      "trigger": "TauntCamera",
+      "contents": "TauntCamera()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "TauntCamera()"
+    },
+    {
+      "trigger": "TextEntryLoseFocus",
+      "contents": "TextEntryLoseFocus()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "TextEntryLoseFocus()"
+    },
+    {
+      "trigger": "TimedCos",
+      "contents": "TimedCos(${1:number frequency}, ${2:number min}, ${3:number max}, ${4:number offset})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "TimedCos(frequency, min, max, offset)"
+    },
+    {
+      "trigger": "TimedSin",
+      "contents": "TimedSin(${1:number frequency}, ${2:number origin}, ${3:number max}, ${4:number offset})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "TimedSin(frequency, origin, max, offset)"
+    },
+    {
+      "trigger": "tobool",
+      "contents": "tobool(${1:any val})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "tobool(val)"
+    },
+    {
+      "trigger": "ToggleFavourite",
+      "contents": "ToggleFavourite(${1:string map})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ToggleFavourite(map)"
+    },
+    {
+      "trigger": "tonumber",
+      "contents": "tonumber(${1:any value}, ${2:number base = 10})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "tonumber(value, base)"
+    },
+    {
+      "trigger": "tostring",
+      "contents": "tostring(${1:any value})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "tostring(value)"
+    },
+    {
+      "trigger": "TranslateDownloadableName",
+      "contents": "TranslateDownloadableName(${1:string filename})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "TranslateDownloadableName(filename)"
+    },
+    {
+      "trigger": "type",
+      "contents": "type(${1:any var})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "type(var)"
+    },
+    {
+      "trigger": "TypeID",
+      "contents": "TypeID(${1:any variable})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "TypeID(variable)"
+    },
+    {
+      "trigger": "unpack",
+      "contents": "unpack(${1:table tbl}, ${2:number startIndex = 1}, ${3:number endIndex = #tbl})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "unpack(tbl, startIndex, endIndex)"
+    },
+    {
+      "trigger": "UnPredictedCurTime",
+      "contents": "UnPredictedCurTime()",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "UnPredictedCurTime()"
+    },
+    {
+      "trigger": "UpdateLoadPanel",
+      "contents": "UpdateLoadPanel(${1:string javascript})",
+      "annotation": "Menu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "UpdateLoadPanel(javascript)"
+    },
+    {
+      "trigger": "UTIL_IsUselessModel",
+      "contents": "UTIL_IsUselessModel(${1:string modelName})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "UTIL_IsUselessModel(modelName)"
+    },
+    {
+      "trigger": "ValidPanel",
+      "contents": "ValidPanel(${1:Panel panel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "ValidPanel(panel)"
+    },
+    {
+      "trigger": "Vector",
+      "contents": "Vector(${1:number x = 0}, ${2:number y = 0}, ${3:number z = 0})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "Vector(x, y, z)"
+    },
+    {
+      "trigger": "VectorRand",
+      "contents": "VectorRand(${1:number min = -1}, ${2:number max = 1})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "VectorRand(min, max)"
+    },
+    {
+      "trigger": "VGUIFrameTime",
+      "contents": "VGUIFrameTime()",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "VGUIFrameTime()"
+    },
+    {
+      "trigger": "VGUIRect",
+      "contents": "VGUIRect(${1:number x}, ${2:number y}, ${3:number w}, ${4:number h})",
+      "annotation": "Client",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "VGUIRect(x, y, w, h)"
+    },
+    {
+      "trigger": "VisualizeLayout",
+      "contents": "VisualizeLayout(${1:Panel panel})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "VisualizeLayout(panel)"
+    },
+    {
+      "trigger": "WorkshopFileBase",
+      "contents": "WorkshopFileBase(${1:string namespace}, ${2:table requiredTags})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "WorkshopFileBase(namespace, requiredTags)"
+    },
+    {
+      "trigger": "WorldToLocal",
+      "contents": "WorldToLocal(${1:Vector position}, ${2:Angle angle}, ${3:Vector newSystemOrigin}, ${4:Angle newSystemAngles})",
+      "annotation": "Shared",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "WorldToLocal(position, angle, newSystemOrigin, newSystemAngles)"
+    },
+    {
+      "trigger": "xpcall",
+      "contents": "xpcall(${1:function func}, ${2:function errorCallback}, ${3:vararg arguments})",
+      "annotation": "SharedMenu",
+      "kind": [
+        "function",
+        "f",
+        "Global"
+      ],
+      "details": "xpcall(func, errorCallback, arguments)"
     },
     {
       "trigger": "Add",
