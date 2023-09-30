@@ -1,5 +1,12 @@
 # GLua syntax highlighting in sublime
 
+## Important
+
+Since I (FPtje) have moved away from Sublime, I no longer have time to maintain
+this repository. That means that I will not be solving bugs or updating the
+definitions. Pull requests will still be accepted and merged, but issues will
+not be.
+
 ## Installing throught the package manager:
 1. Open Sublime
 1. Install [Package Control](https://packagecontrol.io/installation)
